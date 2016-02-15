@@ -20,6 +20,7 @@ public class RestaurantProjectG6 {
     public static void main(String[] args) {
         Function1 f1 = new Function1();
         f1.setVisible(true);
+	//You will pull me, yeah!
     }
     
     
