@@ -24,6 +24,7 @@ public class RestaurantProjectG6 {
         //Yeah I pulled you!
         //Testing for github
         // Affirmative! It's working :)
+        //Jaja confirmed!
     }
     
     
