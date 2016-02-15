@@ -21,6 +21,7 @@ public class RestaurantProjectG6 {
         Function1 f1 = new Function1();
         f1.setVisible(true);
 	//You will pull me, yeah!
+        //Yeah I pulled you!
     }
     
     
