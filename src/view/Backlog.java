@@ -5,10 +5,23 @@
  */
 package view;
 
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+
 /**
  *
  * @author Oriopun Jaja
  */
-public class Backlog {
+public class Backlog extends JFrame{
+    
+    private JLabel backlogTitle;
+    private JLabel noOfCusLabel;
+    private JLabel revenueLabel;
+    private JLabel popFoodLabel;
+    private JButton doneButton;
+    
+    
+      
     
 }
