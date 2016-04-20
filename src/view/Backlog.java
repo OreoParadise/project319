@@ -5,9 +5,11 @@
  */
 package view;
 
+import java.awt.BorderLayout;
 import java.awt.Cursor;
 import java.awt.Font;
 import javax.swing.GroupLayout;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -25,9 +27,13 @@ public class Backlog extends JFrame{
     private JLabel revenueLabel;
     private JLabel popFoodLabel;
     private JButton doneButton;
+
+    
     
     public Backlog() {
         initComponents();
+        setSize(500,500);
+        
     }
     
     private void initComponents() {
@@ -37,15 +43,18 @@ public class Backlog extends JFrame{
         revenueLabel = new JLabel();
         popFoodLabel = new JLabel();
         doneButton = new JButton();
-
+        
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
+       
+        
         backlogTitle.setFont(new Font("TH Charm of AU", 0, 36)); // NOI18N
         backlogTitle.setHorizontalAlignment(SwingConstants.CENTER);
         backlogTitle.setText("Backlog");
         backlogTitle.setCursor(new Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         noOfCusLabel.setText("Number of Customer");
+   
         /*noOfCusLabel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 //noOfCusLabelActionPerformed(evt);
@@ -73,7 +82,19 @@ public class Backlog extends JFrame{
             }
         });*/
         
-
+        
+        /* GroupLayout layout = new GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        JLabel background=new JLabel(new ImageIcon("C:\\Users\\Oriopun Jaja\\Desktop\\OreoParadise\\project319\\src\\restaurantprojectg6\\PicCupcake2.png"));
+        add(background);
+        background.setLayout(new FlowLayout());*/
+        
+        setTitle("Backlog");
+        setLayout(new BorderLayout());
+        //setSize(500,500);
+        setContentPane(new JLabel(new ImageIcon("C:\\Users\\Oriopun Jaja\\Desktop\\OreoParadise\\project319\\src\\restaurantprojectg6\\old-paper.jpg")));
+  
+        
         GroupLayout layout = new GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -106,6 +127,7 @@ public class Backlog extends JFrame{
 
         pack();
     }// </editor-fold>
+    
     
     public String getBacklogTitle(){
         return backlogTitle.getText();
