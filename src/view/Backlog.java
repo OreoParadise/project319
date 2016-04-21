@@ -5,12 +5,16 @@
  */
 package view;
 
+import java.awt.BorderLayout;
 import java.awt.Cursor;
 import java.awt.Font;
+import javax.swing.BoxLayout;
 import javax.swing.GroupLayout;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.SpringLayout;
 import javax.swing.SwingConstants;
 import javax.swing.WindowConstants;
 
@@ -25,87 +29,56 @@ public class Backlog extends JFrame{
     private JLabel revenueLabel;
     private JLabel popFoodLabel;
     private JButton doneButton;
+    private JLabel BG;
+    
+    
     
     public Backlog() {
         initComponents();
+        setSize(915,736);
+        
     }
+   
     
-    private void initComponents() {
-
-        backlogTitle = new JLabel();
-        noOfCusLabel= new JLabel();
-        revenueLabel = new JLabel();
-        popFoodLabel = new JLabel();
+    private void initComponents(){
         doneButton = new JButton();
+        popFoodLabel = new JLabel();
+        noOfCusLabel = new JLabel();
+        revenueLabel = new JLabel();
+        backlogTitle = new JLabel();
+        BG = new JLabel();
+        
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        doneButton.setIcon(new javax.swing.ImageIcon(("C:\\Users\\Oriopun Jaja\\Desktop\\OreoParadise\\project319\\src\\view\\done.png"))); // NOI18N
+        getContentPane().add(doneButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 560, 140, 40));
 
-        backlogTitle.setFont(new Font("TH Charm of AU", 0, 36)); // NOI18N
-        backlogTitle.setHorizontalAlignment(SwingConstants.CENTER);
-        backlogTitle.setText("Backlog");
-        backlogTitle.setCursor(new Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        popFoodLabel.setFont(new java.awt.Font("Times New Roman", 2, 36)); // NOI18N
+        popFoodLabel.setText("Popular food");
+        getContentPane().add(popFoodLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 440, -1, -1));
 
-        noOfCusLabel.setText("Number of Customer");
-        /*noOfCusLabel.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                //noOfCusLabelActionPerformed(evt);
-            }
-        });*/
+        noOfCusLabel.setFont(new java.awt.Font("Times New Roman", 2, 36)); // NOI18N
+        noOfCusLabel.setText("Number of customer");
+        getContentPane().add(noOfCusLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 300, -1, -1));
 
+        revenueLabel.setFont(new java.awt.Font("Times New Roman", 2, 36)); // NOI18N
         revenueLabel.setText("Revenue");
-        /*revenueLabel.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                //revenueLabelActionPerformed(evt);
-            }
-        });*/
+        getContentPane().add(revenueLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 370, -1, -1));
 
-        popFoodLabel.setText("Popular Food");
-        /*popFoodLabel.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                //popFoodLabelActionPerformed(evt);
-            }
-        });*/
-        
-        doneButton.setText("DONE");
-        /*doneButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                //doneButtonActionPerformed(evt);
-            }
-        });*/
-        
+        backlogTitle.setFont(new java.awt.Font("Times New Roman", 3, 70)); // NOI18N
+        backlogTitle.setText("Backlog");
+        getContentPane().add(backlogTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 180, -1, -1));
 
-        GroupLayout layout = new GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(60, 60, 60)
-                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.TRAILING)
-                    .addComponent(backlogTitle, GroupLayout.PREFERRED_SIZE, 343, GroupLayout.PREFERRED_SIZE)
-                    .addComponent(noOfCusLabel, GroupLayout.PREFERRED_SIZE, 331, GroupLayout.PREFERRED_SIZE)
-                    .addComponent(revenueLabel, GroupLayout.PREFERRED_SIZE, 331, GroupLayout.PREFERRED_SIZE)
-                    .addComponent(popFoodLabel, GroupLayout.PREFERRED_SIZE, 331, GroupLayout.PREFERRED_SIZE)
-                    .addComponent(doneButton, GroupLayout.PREFERRED_SIZE, 331, GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(77, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(25, 25, 25)
-                .addComponent(backlogTitle)
-                .addGap(54, 54, 54)
-                .addComponent(noOfCusLabel)
-                .addGap(42, 42, 42)
-                .addComponent(revenueLabel)
-                .addGap(42, 42, 42)
-                .addComponent(popFoodLabel)
-                .addGap(54, 54, 54)
-                .addComponent(doneButton)
-                .addContainerGap(94, Short.MAX_VALUE))
-        );
+        BG.setIcon(new javax.swing.ImageIcon("C:\\Users\\Oriopun Jaja\\Desktop\\OreoParadise\\project319\\src\\view\\BG.png")); // NOI18N
+        BG.setText("BG");
+        getContentPane().add(BG, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 899, -1));
 
         pack();
-    }// </editor-fold>
+    }
+    
+    
+    
     
     public String getBacklogTitle(){
         return backlogTitle.getText();
