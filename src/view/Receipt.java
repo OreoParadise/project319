@@ -20,92 +20,80 @@ import javax.swing.WindowConstants;
  */
 public class Receipt extends JFrame{
     
-    private JLabel receiptTitle;
+    private JLabel TableNoLabel;
+    private JButton checkBillButton;
     private JLabel cusNameLabel;
-    private JLabel tableNoLabel;
+    private JLabel jLabel1;
+    private JLabel jLabel2;
+    private JLabel jLabel3;
+    private JLabel jLabel4;
+    private JLabel jLabel5;
+    private JLabel jLabel7;
     private JLabel totalPriceLabel;
-    private JButton checkBillLabel;
+    private JLabel receiptTitle;
+    
     
     public Receipt() {
         initComponents();
+        setSize(915,736);
     }
     
     private void initComponents() {
-
-        receiptTitle = new JLabel();
-        cusNameLabel= new JLabel();
-        tableNoLabel = new JLabel();
+        
+        
+        checkBillButton = new JButton();
         totalPriceLabel = new JLabel();
-        checkBillLabel = new JButton();
+        TableNoLabel = new JLabel();
+        cusNameLabel = new JLabel();
+        jLabel7 = new JLabel();
+        jLabel5 = new JLabel();
+        jLabel4 = new JLabel();
+        jLabel2 = new JLabel();
+        jLabel3 = new JLabel();
+        jLabel1 = new JLabel();
+        receiptTitle = new JLabel();
 
-        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        receiptTitle.setFont(new Font("TH Charm of AU", 0, 36)); // NOI18N
-        receiptTitle.setHorizontalAlignment(SwingConstants.CENTER);
-        receiptTitle.setText("Receipt");
-        receiptTitle.setCursor(new Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        checkBillButton.setIcon(new javax.swing.ImageIcon("C:\\Users\\Oriopun Jaja\\Desktop\\OreoParadise\\project319\\src\\view\\checkBill.png")); // NOI18N
+        getContentPane().add(checkBillButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 570, 130, 40));
 
-        cusNameLabel.setText("Customer Name: ");
-        /*cusNameLabel.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                //cusNameLabelActionPerformed(evt);
-            }
-        });*/
+        totalPriceLabel.setFont(new java.awt.Font("Times New Roman", 3, 20)); // NOI18N
+        getContentPane().add(totalPriceLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 420, 80, 20));
 
-        tableNoLabel.setText("Table No.");
-        /*tableNoLabel.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                //tableNoLabelActionPerformed(evt);
-            }
-        });*/
+        TableNoLabel.setFont(new java.awt.Font("Times New Roman", 3, 20)); // NOI18N
+        getContentPane().add(TableNoLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 370, 80, 20));
 
-        totalPriceLabel.setText("Total Price: ");
-        /*totalPriceLabel.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                //totalPriceLabelActionPerformed(evt);
-            }
-        });*/
-        
-        checkBillLabel.setText("Check Bill");
-        /*checkBillLabel.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                //checkBillLabelActionPerformed(evt);
-            }
-        });*/
-        
+        cusNameLabel.setFont(new java.awt.Font("Times New Roman", 3, 20)); // NOI18N
+        getContentPane().add(cusNameLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 320, 80, 20));
 
-        GroupLayout layout = new GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(60, 60, 60)
-                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.TRAILING)
-                    .addComponent(receiptTitle, GroupLayout.PREFERRED_SIZE, 343, GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cusNameLabel, GroupLayout.PREFERRED_SIZE, 331, GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tableNoLabel, GroupLayout.PREFERRED_SIZE, 331, GroupLayout.PREFERRED_SIZE)
-                    .addComponent(totalPriceLabel, GroupLayout.PREFERRED_SIZE, 331, GroupLayout.PREFERRED_SIZE)
-                    .addComponent(checkBillLabel, GroupLayout.PREFERRED_SIZE, 331, GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(77, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(25, 25, 25)
-                .addComponent(receiptTitle)
-                .addGap(54, 54, 54)
-                .addComponent(cusNameLabel)
-                .addGap(42, 42, 42)
-                .addComponent(tableNoLabel)
-                .addGap(42, 42, 42)
-                .addComponent(totalPriceLabel)
-                .addGap(54, 54, 54)
-                .addComponent(checkBillLabel)
-                .addContainerGap(94, Short.MAX_VALUE))
-        );
+        jLabel7.setFont(new java.awt.Font("Times New Roman", 0, 20)); // NOI18N
+        jLabel7.setText("Total Price");
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 420, -1, -1));
+
+        jLabel5.setFont(new java.awt.Font("Times New Roman", 0, 20)); // NOI18N
+        jLabel5.setText("Table No.");
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 370, -1, -1));
+
+        jLabel4.setFont(new java.awt.Font("Times New Roman", 0, 20)); // NOI18N
+        jLabel4.setText("Customer Name: ");
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 320, -1, -1));
+
+        jLabel2.setFont(new java.awt.Font("Times New Roman", 3, 48)); // NOI18N
+        jLabel2.setText("Receipt");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 240, -1, -1));
+
+        jLabel3.setIcon(new javax.swing.ImageIcon("C:\\Users\\Oriopun Jaja\\Desktop\\OreoParadise\\project319\\src\\view\\receipt.png")); // NOI18N
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 190, -1, -1));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Oriopun Jaja\\Desktop\\OreoParadise\\project319\\src\\view\\BG.png")); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 920, -1));
 
         pack();
     }// </editor-fold>
+    
+    
     
     public String getBacklogTitle(){
         return receiptTitle.getText();

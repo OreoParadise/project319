@@ -54,15 +54,15 @@ public class Backlog extends JFrame{
         doneButton.setIcon(new javax.swing.ImageIcon(("C:\\Users\\Oriopun Jaja\\Desktop\\OreoParadise\\project319\\src\\view\\done.png"))); // NOI18N
         getContentPane().add(doneButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 560, 140, 40));
 
-        popFoodLabel.setFont(new java.awt.Font("Times New Roman", 2, 36)); // NOI18N
+        popFoodLabel.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
         popFoodLabel.setText("Popular food");
         getContentPane().add(popFoodLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 440, -1, -1));
 
-        noOfCusLabel.setFont(new java.awt.Font("Times New Roman", 2, 36)); // NOI18N
+        noOfCusLabel.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
         noOfCusLabel.setText("Number of customer");
         getContentPane().add(noOfCusLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 300, -1, -1));
 
-        revenueLabel.setFont(new java.awt.Font("Times New Roman", 2, 36)); // NOI18N
+        revenueLabel.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
         revenueLabel.setText("Revenue");
         getContentPane().add(revenueLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 370, -1, -1));
 
