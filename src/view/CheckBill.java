@@ -17,8 +17,8 @@ import javax.swing.JLabel;
 
 
 
-public class checkBill extends JFrame {
-    public checkBill(){
+public class CheckBill extends JFrame {
+    public CheckBill(){
         initComponents();
     }
     

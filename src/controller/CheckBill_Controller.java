@@ -6,21 +6,21 @@
 package controller;
 
 import javax.swing.JFrame;
-import view.checkBill;
+import view.CheckBill;
 
 /**
  *
  * @author JamesP
  */
-public class checkBill_Controller extends JFrame {
-    private checkBill cb;
+public class CheckBill_Controller extends JFrame {
+    private CheckBill cb;
     
-    public checkBill_Controller(){
-        cb = new checkBill();
+    public CheckBill_Controller(){
+        cb = new CheckBill();
         cb.setVisible(true);
     }
     
     public static void main(String args[]){
-        new checkBill_Controller();
+        new CheckBill_Controller();
     }
 }
