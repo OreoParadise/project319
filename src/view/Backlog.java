@@ -25,9 +25,12 @@ import javax.swing.WindowConstants;
 public class Backlog extends JFrame{
     
     private JLabel backlogTitle;
+    private JLabel JLabel2;
+    private JLabel JLabel3;
+    private JLabel JLabel1;
+    private JLabel popFoodLabel;
     private JLabel noOfCusLabel;
     private JLabel revenueLabel;
-    private JLabel popFoodLabel;
     private JButton doneButton;
     private JLabel BG;
     
@@ -42,9 +45,12 @@ public class Backlog extends JFrame{
     
     private void initComponents(){
         doneButton = new JButton();
-        popFoodLabel = new JLabel();
+        JLabel1 = new JLabel();
+        JLabel2 = new JLabel();
+        JLabel3 = new JLabel();
         noOfCusLabel = new JLabel();
         revenueLabel = new JLabel();
+        popFoodLabel = new JLabel();
         backlogTitle = new JLabel();
         BG = new JLabel();
         
@@ -54,17 +60,26 @@ public class Backlog extends JFrame{
         doneButton.setIcon(new javax.swing.ImageIcon(("C:\\Users\\Oriopun Jaja\\Desktop\\OreoParadise\\project319\\src\\view\\done.png"))); // NOI18N
         getContentPane().add(doneButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 560, 140, 40));
 
-        popFoodLabel.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
-        popFoodLabel.setText("Popular food");
-        getContentPane().add(popFoodLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 440, -1, -1));
+        JLabel1.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
+        JLabel1.setText("Popular food");
+        getContentPane().add(JLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 440, -1, -1));
 
-        noOfCusLabel.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
-        noOfCusLabel.setText("Number of customer");
-        getContentPane().add(noOfCusLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 300, -1, -1));
+        JLabel2.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
+        JLabel2.setText("Number of customer");
+        getContentPane().add(JLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 300, -1, -1));
 
-        revenueLabel.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
-        revenueLabel.setText("Revenue");
-        getContentPane().add(revenueLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 370, -1, -1));
+        JLabel3.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
+        JLabel3.setText("Revenue");
+        getContentPane().add(JLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 370, -1, -1));
+        
+        popFoodLabel.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
+        getContentPane().add(popFoodLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 440, 120, 40));
+
+        noOfCusLabel.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
+        getContentPane().add(noOfCusLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 310, 120, 40));
+
+        revenueLabel.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
+        getContentPane().add(revenueLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 380, 120, 40));
 
         backlogTitle.setFont(new java.awt.Font("Times New Roman", 3, 70)); // NOI18N
         backlogTitle.setText("Backlog");
