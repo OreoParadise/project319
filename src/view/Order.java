@@ -17,6 +17,9 @@ import javax.swing.JTable;
  */
 public class Order extends JFrame {
     
+    public Order(){
+        initComponents();
+    }
     
     private void initComponents() {
 

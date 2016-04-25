@@ -29,7 +29,6 @@ public class Queuing extends JFrame {
         continueButton = new javax.swing.JButton();
         phoneLabel = new javax.swing.JLabel();
         phoneNumber = new javax.swing.JTextField();
-        jLabel7 = new javax.swing.JLabel();
         queueTimeLabel = new javax.swing.JLabel();
         queueTime = new javax.swing.JTextField();
         backButton = new javax.swing.JButton();
