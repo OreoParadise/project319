@@ -57,7 +57,7 @@ public class Backlog extends JFrame{
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        doneButton.setIcon(new javax.swing.ImageIcon(("C:\\Users\\Oriopun Jaja\\Desktop\\OreoParadise\\project319\\src\\view\\done.png"))); // NOI18N
+        doneButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/done.png"))); // NOI18N
         getContentPane().add(doneButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 560, 140, 40));
 
         JLabel1.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
@@ -85,7 +85,7 @@ public class Backlog extends JFrame{
         backlogTitle.setText("Backlog");
         getContentPane().add(backlogTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 180, -1, -1));
 
-        BG.setIcon(new javax.swing.ImageIcon("C:\\Users\\Oriopun Jaja\\Desktop\\OreoParadise\\project319\\src\\view\\BG.png")); // NOI18N
+        BG.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/BG.png"))); // NOI18N
         BG.setText("BG");
         getContentPane().add(BG, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 899, -1));
 
