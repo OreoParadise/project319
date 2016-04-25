@@ -18,6 +18,10 @@ public class BillTable extends JFrame {
     private JToggleButton tableNumber;
     private JButton doneButton;
     
+    public BillTable(){
+        initComponents();
+    }
+    
     private void initComponents() {
 
     Table3 = new javax.swing.JToggleButton();
@@ -270,4 +274,4 @@ public class BillTable extends JFrame {
     private javax.swing.JToggleButton Table9;
     private javax.swing.JLabel jLabel2;
 }
- 
+ 99
