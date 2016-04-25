@@ -274,4 +274,3 @@ public class BillTable extends JFrame {
     private javax.swing.JToggleButton Table9;
     private javax.swing.JLabel jLabel2;
 }
- 99
