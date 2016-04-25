@@ -15,9 +15,6 @@ import javax.swing.JFrame;
  * @author m
  */
 public class BillTable extends JFrame {
-    private JLabel BillTableMap;
-    private JToggleButton tableNumber;
-    private JButton doneButton;
     
     public BillTable(){
         initComponents();
@@ -43,125 +40,35 @@ public class BillTable extends JFrame {
     setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
     Table3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/Picture/Check.png"))); // NOI18N
-    /*
-    Table3.addMouseListener(new java.awt.event.MouseAdapter() {
-        public void mouseClicked(java.awt.event.MouseEvent evt) {
-            Table3MouseClicked(evt);
-        }
-    });*/
     
-    
-    Table2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/Picture/Check.png"))); // NOI18N
-    /*
-    Table2.addMouseListener(new java.awt.event.MouseAdapter() {
-        public void mouseClicked(java.awt.event.MouseEvent evt) {
-            Table2MouseClicked(evt);
-        }
-    });
-    */
+    Table2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/Picture/Check.png"))); // NOI18N 
 
     Table5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/Picture/Check.png"))); // NOI18N
-    /*
-    Table5.addMouseListener(new java.awt.event.MouseAdapter() {
-        public void mouseClicked(java.awt.event.MouseEvent evt) {
-            Table5MouseClicked(evt);
-        }
-    });
-    */
-
-    Table1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/Check.png"))); // NOI18N
-    /*
-    Table1.addMouseListener(new java.awt.event.MouseAdapter() {
-        public void mouseClicked(java.awt.event.MouseEvent evt) {
-            Table1MouseClicked(evt);
-        }
-    });
-    */
-
-    Table12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/Picture/Check.png"))); // NOI18N
-    /*
-    Table12.addMouseListener(new java.awt.event.MouseAdapter() {
-        public void mouseClicked(java.awt.event.MouseEvent evt) {
-            Table12MouseClicked(evt);
-        }
-    });
-    */
     
+    Table1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/Check.png"))); // NOI18N
+    
+    Table12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/Picture/Check.png"))); // NOI18N
+        
     Table4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/Picture/Check.png"))); // NOI18N
-    /*
-    Table4.addMouseListener(new java.awt.event.MouseAdapter() {
-        public void mouseClicked(java.awt.event.MouseEvent evt) {
-            Table4MouseClicked(evt);
-        }
-    });
-    */
-
+    
     Table6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/Picture/Check.png"))); // NOI18N
-    /*
-    Table6.addMouseListener(new java.awt.event.MouseAdapter() {
-        public void mouseClicked(java.awt.event.MouseEvent evt) {
-            Table6MouseClicked(evt);
-        }
-    });
-    */
-
+    
     Table7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/Picture/Check.png"))); // NOI18N
-    /*
-    Table7.addMouseListener(new java.awt.event.MouseAdapter() {
-        public void mouseClicked(java.awt.event.MouseEvent evt) {
-            Table7MouseClicked(evt);
-        }
-    });
-    */
-
+    
     Table8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/Picture/Check.png"))); // NOI18N
-    /*
-    Table8.addMouseListener(new java.awt.event.MouseAdapter() {
-        public void mouseClicked(java.awt.event.MouseEvent evt) {
-            Table8MouseClicked(evt);
-        }
-    });
-    */
-
+    
     Table9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/Picture/Check.png"))); // NOI18N
-    /*
-    Table9.addMouseListener(new java.awt.event.MouseAdapter() {
-        public void mouseClicked(java.awt.event.MouseEvent evt) {
-            Table9MouseClicked(evt);
-        }
-    });
-    */
-
+    
     Table10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/Picture/Check.png"))); // NOI18N
-    /*
-    Table10.addMouseListener(new java.awt.event.MouseAdapter() {
-        public void mouseClicked(java.awt.event.MouseEvent evt) {
-            Table10MouseClicked(evt);
-        }
-    });
-    */
-
+    
     Table11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/Picture/Check.png"))); // NOI18N
-    /*
-    Table11.addMouseListener(new java.awt.event.MouseAdapter() {
-        public void mouseClicked(java.awt.event.MouseEvent evt) {
-            Table11MouseClicked(evt);
-        }
-    });
-    */
-
+    
     doneButton.setBackground(new java.awt.Color(255, 204, 204));
     doneButton.setForeground(new java.awt.Color(51, 51, 51));
     doneButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/Picture/Girl.png"))); // NOI18N
     doneButton.setText("DONE");
     doneButton.setToolTipText("");
-    /*
-    doneButton.addActionListener(new java.awt.event.ActionListener() {
-        public void actionPerformed(java.awt.event.ActionEvent evt) {
-            doneButtonActionPerformed(evt);
-        }
-    });
-    */
+    
 
     jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restaurantprojectg6/R.jpg"))); // NOI18N
 
@@ -297,44 +204,6 @@ public class BillTable extends JFrame {
         Table12.addMouseListener(m);
     }
     
-    //methods for getting table toggle buttons for using in controller
-    public JToggleButton getTable1(){
-        return Table1;
-    }    
-    public JToggleButton getTable2(){
-        return Table2;
-    }    
-    public JToggleButton getTable3(){
-        return Table3;
-    }    
-    public JToggleButton getTable4(){
-        return Table4;
-    }    
-    public JToggleButton getTable5(){
-        return Table5;
-    }    
-    public JToggleButton getTable6(){
-        return Table6;
-    }    
-    public JToggleButton getTable7(){
-        return Table7;
-    }    
-    public JToggleButton getTable8(){
-        return Table8;
-    }    
-    public JToggleButton getTable9(){
-        return Table9;
-    }    
-    public JToggleButton getTable10(){
-        return Table10;
-    }    
-    public JToggleButton getTable11(){
-        return Table11;
-    }    
-    public JToggleButton getTable12(){
-        return Table12;
-    }
-    
     // Variables declaration - do not modify                     
     private JToggleButton Table1;
     private JToggleButton Table10;
@@ -349,4 +218,5 @@ public class BillTable extends JFrame {
     private JToggleButton Table8;
     private JToggleButton Table9;
     private JLabel jLabel2;
+    private JButton doneButton;
 }
