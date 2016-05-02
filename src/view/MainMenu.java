@@ -23,77 +23,49 @@ public class MainMenu extends JFrame {
     /**
      * Creates new form Function1
      */
-    private JButton backlogButton; //rename from backlog
-    private JButton billingButton; //rename from billing
-    private JButton queuingButton; //rename from jButton2
-    private JLabel restaurantTitle; //rename from jLabel1
+    private JLabel MainMenuBG;
+    private JLabel MainMenuTitle;
+    private JButton backlogButton;
+    private JButton billingButton;
+    private JButton queuingButton;
     
     public MainMenu() {
         initComponents();
+        setSize(915,736);
     }
     
     private void initComponents() {
 
-        restaurantTitle = new JLabel();
-        queuingButton = new JButton();
+        MainMenuTitle = new JLabel();
         billingButton = new JButton();
         backlogButton = new JButton();
+        queuingButton = new JButton();
+        MainMenuBG = new JLabel();
 
-        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        restaurantTitle.setFont(new Font("TH Charm of AU", 0, 36)); // NOI18N
-        restaurantTitle.setHorizontalAlignment(SwingConstants.CENTER);
-        restaurantTitle.setText("Restaurant Management System");
-        restaurantTitle.setCursor(new Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        MainMenuTitle.setFont(new java.awt.Font("Times New Roman", 3, 48)); // NOI18N
+        MainMenuTitle.setText("Restaurant Management System");
+        getContentPane().add(MainMenuTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 210, -1, -1));
 
-        queuingButton.setText("Queuing");
-        /*queuingButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                //queuingButtonActionPerformed(evt);
-            }
-        });*/
+        billingButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/billing.png"))); // NOI18N
+        getContentPane().add(billingButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 400, 310, 40));
 
-        billingButton.setText("Billing");
-        /*billingButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                //billingButtonActionPerformed(evt);
-            }
-        });*/
+        backlogButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/backlog.png"))); // NOI18N
+        getContentPane().add(backlogButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 490, 310, 40));
 
-        backlogButton.setText("Backlog");
+        queuingButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/queuing.png"))); // NOI18N
+        getContentPane().add(queuingButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 310, 310, 40));
 
-        GroupLayout layout = new GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(60, 60, 60)
-                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.TRAILING)
-                    .addComponent(restaurantTitle, GroupLayout.PREFERRED_SIZE, 343, GroupLayout.PREFERRED_SIZE)
-                    .addComponent(queuingButton, GroupLayout.PREFERRED_SIZE, 331, GroupLayout.PREFERRED_SIZE)
-                    .addComponent(billingButton, GroupLayout.PREFERRED_SIZE, 331, GroupLayout.PREFERRED_SIZE)
-                    .addComponent(backlogButton, GroupLayout.PREFERRED_SIZE, 331, GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(77, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(25, 25, 25)
-                .addComponent(restaurantTitle)
-                .addGap(54, 54, 54)
-                .addComponent(queuingButton)
-                .addGap(42, 42, 42)
-                .addComponent(billingButton)
-                .addGap(42, 42, 42)
-                .addComponent(backlogButton)
-                .addContainerGap(94, Short.MAX_VALUE))
-        );
+        MainMenuBG.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/BG.png"))); // NOI18N
+        getContentPane().add(MainMenuBG, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
     }// </editor-fold>
     
-    public String getRestaurantTitle(){
-        return restaurantTitle.getText();
+    public String getMianMenuTitle(){
+        return MainMenuTitle.getText();
     }
 }
 
