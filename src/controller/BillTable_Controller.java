@@ -21,23 +21,18 @@ import view.BillTable;
 public class BillTable_Controller extends JFrame {
     
     private BillTable billtable;
-    Image imgoff = new ImageIcon(this.getClass().getResource("/restaurantprojectg6/Picture/Error.png")).getImage();
-    Image imgon = new ImageIcon(this.getClass().getResource("/restaurantprojectg6/Picture/Check.png")).getImage();
+    Image imgoff = new ImageIcon(this.getClass().getResource("/view/Error.png")).getImage();
+    Image imgon = new ImageIcon(this.getClass().getResource("/view/Check.png")).getImage();
     
     public BillTable_Controller() {
         billtable = new BillTable();
-        billtable.setClickedTable1(new MouseAction());
+        /*  billtable.setClickedTable1(new MouseAction());
         billtable.setClickedTable2(new MouseAction());
         billtable.setClickedTable3(new MouseAction());
         billtable.setClickedTable4(new MouseAction());
         billtable.setClickedTable5(new MouseAction());
         billtable.setClickedTable6(new MouseAction());
-        billtable.setClickedTable7(new MouseAction());
-        billtable.setClickedTable8(new MouseAction());
-        billtable.setClickedTable9(new MouseAction());
-        billtable.setClickedTable10(new MouseAction());
-        billtable.setClickedTable11(new MouseAction());
-        billtable.setClickedTable12(new MouseAction());
+        billtable.setClickedTable7(new MouseAction());*/
         billtable.setVisible(true);
     }
     
