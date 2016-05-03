@@ -95,7 +95,7 @@ public class Receipt extends JFrame{
     
     
     
-    public String getBacklogTitle(){
+    public String getReceiptTitle(){
         return receiptTitle.getText();
     }
     
