@@ -43,6 +43,7 @@ public class MainMenu extends JFrame {
         MainMenuBG = new JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         MainMenuTitle.setFont(new java.awt.Font("Times New Roman", 3, 48)); // NOI18N

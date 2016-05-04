@@ -54,6 +54,7 @@ public class Receipt extends JFrame{
         receiptTitle = new JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         checkBillButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/checkBill.png"))); // NOI18N

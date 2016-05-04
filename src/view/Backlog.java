@@ -55,6 +55,7 @@ public class Backlog extends JFrame{
         BG = new JLabel();
         
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         doneButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/done.png"))); // NOI18N

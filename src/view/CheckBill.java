@@ -28,6 +28,7 @@ public class CheckBill extends JFrame {
         checkBillButton = new javax.swing.JButton();           //changed name from jButton1
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
 
         billLabel.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         billLabel.setText("Billing");
