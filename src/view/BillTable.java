@@ -6,6 +6,7 @@
 package view;
 
 import controller.BillTable_Controller;
+import java.awt.event.ActionEvent;
 import java.awt.event.MouseAdapter;
 import javax.swing.JLabel;
 import javax.swing.JToggleButton;
@@ -117,6 +118,7 @@ public class BillTable extends JFrame {
             doneButtonActionPerformed(evt);
         }
         });
+
         getContentPane().add(doneButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 570, 140, 40));
         
         jLabel3.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
