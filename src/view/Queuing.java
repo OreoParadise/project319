@@ -19,151 +19,88 @@ public class Queuing extends JFrame {
     
     public Queuing(){
         initComponents();
+        
+       
     }
     
     private void initComponents() {
 
-        restaurantTitle = new javax.swing.JLabel();
-        customerName = new javax.swing.JTextField();
-        customerLabel = new javax.swing.JLabel();
-        continueButton = new javax.swing.JButton();
-        phoneLabel = new javax.swing.JLabel();
-        phoneNumber = new javax.swing.JTextField();
-        queueTimeLabel = new javax.swing.JLabel();
-        queueTime = new javax.swing.JTextField();
-        backButton = new javax.swing.JButton();
-        chooseTable = new javax.swing.JButton();
+        queuingTime = new JTextField();
+        timeLabel = new JLabel();
+        doneButton = new JButton();
+        queuingDate = new JTextField();
+        customerName = new JTextField();
+        phoneNumber = new JTextField();
+        dateLabel = new JLabel();
+        phoneNumLabel = new JLabel();
+        custNameLabel = new JLabel();
+        jLabel4 = new JLabel();
+        MainMenuTitle = new JLabel();
+        QueuingBG = new JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+       setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        restaurantTitle.setFont(new java.awt.Font("TH Charm of AU", 0, 36)); // NOI18N
-        restaurantTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        restaurantTitle.setText("Restaurant Management System");
-        restaurantTitle.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        queuingTime.setBackground(new java.awt.Color(255, 255, 153));
+        queuingTime.setFont(new java.awt.Font("Times New Roman", 0, 20)); // NOI18N
+        getContentPane().add(queuingTime, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 480, 140, 30));
 
-        customerName.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        /*customerName.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                customerNameActionPerformed(evt);
-            }
-        });*/
+        timeLabel.setFont(new java.awt.Font("Times New Roman", 0, 28)); // NOI18N
+        timeLabel.setText("Queuing Time:");
+        getContentPane().add(timeLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 480, -1, -1));
 
-        customerLabel.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        customerLabel.setText("Customer's name");
+        doneButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/done.png"))); // NOI18N
+        getContentPane().add(doneButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 570, 140, 40));
 
-        continueButton.setText("Continue");
-        /*continueButton.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                continueButtonMouseClicked(evt);
-            }
-        });
-        continueButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                continueButtonActionPerformed(evt);
-            }
-        });*/
+        queuingDate.setBackground(new java.awt.Color(255, 255, 153));
+        queuingDate.setFont(new java.awt.Font("Times New Roman", 0, 20)); // NOI18N
+        getContentPane().add(queuingDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 420, 140, 30));
 
-        phoneLabel.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        phoneLabel.setText("Phone Number");
+        customerName.setBackground(new java.awt.Color(255, 255, 153));
+        customerName.setFont(new java.awt.Font("Times New Roman", 0, 20)); // NOI18N
+        getContentPane().add(customerName, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 300, 140, 30));
 
-        phoneNumber.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        phoneNumber.setBackground(new java.awt.Color(255, 255, 153));
+        phoneNumber.setFont(new java.awt.Font("Times New Roman", 0, 20)); // NOI18N
+        getContentPane().add(phoneNumber, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 360, 140, 30));
 
-        queueTimeLabel.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        queueTimeLabel.setText("Queuing Time");
+        dateLabel.setFont(new java.awt.Font("Times New Roman", 0, 28)); // NOI18N
+        dateLabel.setText("Queuing Date:");
+        getContentPane().add(dateLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 420, -1, -1));
 
-        queueTime.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        phoneNumLabel.setFont(new java.awt.Font("Times New Roman", 0, 28)); // NOI18N
+        phoneNumLabel.setText("Phone Number:");
+        getContentPane().add(phoneNumLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 360, -1, -1));
 
-        backButton.setText("Back");
-        /*backButton.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                backButtonMouseClicked(evt);
-            }
-        });
-        backButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                backButtonActionPerformed(evt);
-            }
-        });
-        */
-        chooseTable.setText("Choose Table");
-        /*chooseTable.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                chooseTableActionPerformed(evt);
-            }
-        });
-        */
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(23, 23, 23)
-                .addComponent(backButton)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(continueButton)
-                .addGap(20, 20, 20))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(55, 55, 55)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(phoneLabel)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(customerLabel)
-                            .addComponent(queueTimeLabel))
-                        .addGap(51, 51, 51)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(queueTime, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(phoneNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(customerName, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(126, 126, 126)
-                        .addComponent(chooseTable, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(restaurantTitle, javax.swing.GroupLayout.DEFAULT_SIZE, 537, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(27, 27, 27)
-                .addComponent(restaurantTitle)
-                .addGap(36, 36, 36)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(customerName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(customerLabel))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(phoneNumber, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(phoneLabel))
-                .addGap(24, 24, 24)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(queueTimeLabel)
-                    .addComponent(queueTime, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(44, 44, 44)
-                .addComponent(chooseTable)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 106, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(continueButton)
-                    .addComponent(backButton))
-                .addGap(58, 58, 58))
-        );
+        custNameLabel.setFont(new java.awt.Font("Times New Roman", 0, 28)); // NOI18N
+        custNameLabel.setText("Customer Name:");
+        getContentPane().add(custNameLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 300, -1, -1));
+
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/reserve.png"))); // NOI18N
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 260, -1, -1));
+
+        MainMenuTitle.setFont(new java.awt.Font("Times New Roman", 3, 56)); // NOI18N
+        MainMenuTitle.setText("Queuing");
+        getContentPane().add(MainMenuTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 180, -1, -1));
+
+        QueuingBG.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/BG.png"))); // NOI18N
+        getContentPane().add(QueuingBG, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
     }// </editor-fold>
      
     // Variables declaration - do not modify                     
-    private JButton continueButton;
-    private JButton backButton;
-    private JButton chooseTable;
+    private JLabel MainMenuTitle;
+    private JLabel QueuingBG;
+    private JLabel custNameLabel;
     private JTextField customerName;
-    private JLabel restaurantTitle;  //rename from jLabel1
-    private JLabel customerLabel;    //rename from jLabel2
-    private JLabel phoneLabel;       //rename from jLabel3
-    private JLabel queueTimeLabel;   //rename from jLabel8
+    private JLabel dateLabel;
+    private JButton doneButton;
+    private JLabel jLabel4;
+    private JLabel phoneNumLabel;
     private JTextField phoneNumber;
-    private JTextField queueTime;
+    private JTextField queuingDate;
+    private JTextField queuingTime;
+    private JLabel timeLabel;
     // End of variables declaration
 }
