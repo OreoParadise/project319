@@ -38,43 +38,44 @@ public class Queuing extends JFrame {
         MainMenuTitle = new JLabel();
         QueuingBG = new JLabel();
 
-       setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         queuingTime.setBackground(new java.awt.Color(255, 255, 153));
         queuingTime.setFont(new java.awt.Font("Times New Roman", 0, 20)); // NOI18N
-        getContentPane().add(queuingTime, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 480, 140, 30));
+        getContentPane().add(queuingTime, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 460, 140, 30));
 
-        timeLabel.setFont(new java.awt.Font("Times New Roman", 0, 28)); // NOI18N
+        timeLabel.setFont(new java.awt.Font("Times New Roman", 0, 25)); // NOI18N
         timeLabel.setText("Queuing Time:");
-        getContentPane().add(timeLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 480, -1, -1));
+        getContentPane().add(timeLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 460, -1, -1));
 
-        doneButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/done.png"))); // NOI18N
-        getContentPane().add(doneButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 570, 140, 40));
+        doneButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/chooseTable.png"))); // NOI18N
+        getContentPane().add(doneButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 580, 170, 30));
 
         queuingDate.setBackground(new java.awt.Color(255, 255, 153));
         queuingDate.setFont(new java.awt.Font("Times New Roman", 0, 20)); // NOI18N
-        getContentPane().add(queuingDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 420, 140, 30));
+        getContentPane().add(queuingDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 410, 140, 30));
 
         customerName.setBackground(new java.awt.Color(255, 255, 153));
         customerName.setFont(new java.awt.Font("Times New Roman", 0, 20)); // NOI18N
-        getContentPane().add(customerName, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 300, 140, 30));
+        getContentPane().add(customerName, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 310, 140, 30));
 
         phoneNumber.setBackground(new java.awt.Color(255, 255, 153));
         phoneNumber.setFont(new java.awt.Font("Times New Roman", 0, 20)); // NOI18N
-        getContentPane().add(phoneNumber, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 360, 140, 30));
+        getContentPane().add(phoneNumber, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 360, 140, 30));
 
-        dateLabel.setFont(new java.awt.Font("Times New Roman", 0, 28)); // NOI18N
+        dateLabel.setFont(new java.awt.Font("Times New Roman", 0, 25)); // NOI18N
         dateLabel.setText("Queuing Date:");
-        getContentPane().add(dateLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 420, -1, -1));
+        getContentPane().add(dateLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 410, -1, -1));
 
-        phoneNumLabel.setFont(new java.awt.Font("Times New Roman", 0, 28)); // NOI18N
+        phoneNumLabel.setFont(new java.awt.Font("Times New Roman", 0, 25)); // NOI18N
         phoneNumLabel.setText("Phone Number:");
         getContentPane().add(phoneNumLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 360, -1, -1));
 
-        custNameLabel.setFont(new java.awt.Font("Times New Roman", 0, 28)); // NOI18N
+        custNameLabel.setFont(new java.awt.Font("Times New Roman", 0, 25)); // NOI18N
         custNameLabel.setText("Customer Name:");
-        getContentPane().add(custNameLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 300, -1, -1));
+        getContentPane().add(custNameLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 310, -1, -1));
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/reserve.png"))); // NOI18N
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 260, -1, -1));
