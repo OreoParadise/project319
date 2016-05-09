@@ -19,6 +19,8 @@ public class Queuing extends JFrame {
     
     public Queuing(){
         initComponents();
+        setLocationRelativeTo(null); 
+       
         
        
     }

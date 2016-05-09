@@ -38,7 +38,7 @@ public class Backlog extends JFrame{
     
     public Backlog() {
         initComponents();
-        setSize(915,736);
+        
         
     }
    

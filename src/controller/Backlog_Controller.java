@@ -26,6 +26,6 @@ public class Backlog_Controller extends JFrame{
     public static void main(String[] args) {
         new Backlog_Controller();
     }
-
     
+
 }

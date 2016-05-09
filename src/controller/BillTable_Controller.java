@@ -26,13 +26,13 @@ public class BillTable_Controller extends JFrame {
     
     public BillTable_Controller() {
         billtable = new BillTable();
-        /*  billtable.setClickedTable1(new MouseAction());
+        billtable.setClickedTable1(new MouseAction());
         billtable.setClickedTable2(new MouseAction());
         billtable.setClickedTable3(new MouseAction());
         billtable.setClickedTable4(new MouseAction());
         billtable.setClickedTable5(new MouseAction());
         billtable.setClickedTable6(new MouseAction());
-        billtable.setClickedTable7(new MouseAction());*/
+        billtable.setClickedTable7(new MouseAction());
         billtable.setVisible(true);
     }
     

@@ -35,7 +35,7 @@ public class Receipt extends JFrame{
     
     public Receipt() {
         initComponents();
-        setSize(915,736);
+        
     }
     
     private void initComponents() {
