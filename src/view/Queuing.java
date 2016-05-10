@@ -52,7 +52,7 @@ public class Queuing extends JFrame {
         timeLabel.setText("Queuing Time:");
         getContentPane().add(timeLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 460, -1, -1));
 
-        doneButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/chooseTable.png"))); // NOI18N
+        doneButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Icon/chooseTable.png"))); // NOI18N
         getContentPane().add(doneButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 580, 170, 30));
 
         queuingDate.setBackground(new java.awt.Color(255, 255, 153));
@@ -79,14 +79,14 @@ public class Queuing extends JFrame {
         custNameLabel.setText("Customer Name:");
         getContentPane().add(custNameLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 310, -1, -1));
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/reserve.png"))); // NOI18N
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Icon/reserve.png"))); // NOI18N
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 260, -1, -1));
 
         MainMenuTitle.setFont(new java.awt.Font("Times New Roman", 3, 56)); // NOI18N
         MainMenuTitle.setText("Queuing");
         getContentPane().add(MainMenuTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 180, -1, -1));
 
-        QueuingBG.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/BG.png"))); // NOI18N
+        QueuingBG.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Icon/BG.png"))); // NOI18N
         getContentPane().add(QueuingBG, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();

@@ -57,7 +57,7 @@ public class MainMenu extends JFrame {
         MainMenuTitle.setText("Restaurant Management System");
         getContentPane().add(MainMenuTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 210, -1, -1));
 
-        billingButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/billing.png"))); // NOI18N
+        billingButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Icon/billing.png"))); // NOI18N
         /*billingButton.addActionListener(new java.awt.event.ActionListener() {
         public void actionPerformed(java.awt.event.ActionEvent evt) {
         billingButtonActionPerformed(evt);
@@ -66,7 +66,7 @@ public class MainMenu extends JFrame {
         getContentPane().add(billingButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 400, 310, 40));
         
         
-        backlogButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/backlog.png"))); // NOI18N
+        backlogButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Icon/backlog.png"))); // NOI18N
         /* backlogButton.addActionListener(new java.awt.event.ActionListener() {
         public void actionPerformed(java.awt.event.ActionEvent evt) {
         backlogButtonActionPerformed(evt);
@@ -74,7 +74,7 @@ public class MainMenu extends JFrame {
         });*/
         getContentPane().add(backlogButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 490, 310, 40));
         
-        queuingButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/queuing.png"))); // NOI18N
+        queuingButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Icon/queuing.png"))); // NOI18N
         /*queuingButton.addActionListener(new java.awt.event.ActionListener() {
         public void actionPerformed(java.awt.event.ActionEvent evt) {
         queuingButtonActionPerformed(evt);
@@ -82,7 +82,7 @@ public class MainMenu extends JFrame {
         });*/
         getContentPane().add(queuingButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 310, 310, 40));
         
-        MainMenuBG.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/BG.png"))); // NOI18N
+        MainMenuBG.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Icon/BG.png"))); // NOI18N
         getContentPane().add(MainMenuBG, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();

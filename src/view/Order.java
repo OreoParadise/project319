@@ -73,13 +73,13 @@ public class Order extends JFrame {
         tableNoLabel1.setFont(new java.awt.Font("Times New Roman", 1, 20)); // NOI18N
         getContentPane().add(tableNoLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 280, 50, 20));
 
-        doneButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/doney.png"))); // NOI18N
+        doneButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Icon/doney.png"))); // NOI18N
         getContentPane().add(doneButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 650, 70, 25));
 
-        clear.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/clear.png"))); // NOI18N
+        clear.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Icon/clear.png"))); // NOI18N
         getContentPane().add(clear, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 560, 70, 25));
 
-        backButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/back.png"))); // NOI18N
+        backButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Icon/back.png"))); // NOI18N
         getContentPane().add(backButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 650, 70, 25));
 
         jLabel5.setFont(new java.awt.Font("Times New Roman", 0, 20)); // NOI18N
@@ -306,10 +306,10 @@ public class Order extends JFrame {
         jLabel3.setText("Table No. ");
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 290, -1, 20));
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Order.png"))); // NOI18N
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Icon/Order.png"))); // NOI18N
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 230, -1, -1));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/BG.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Icon/BG.png"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();

@@ -57,7 +57,7 @@ public class Receipt extends JFrame{
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        checkBillButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/checkBill.png"))); // NOI18N
+        checkBillButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Icon/checkBill.png"))); // NOI18N
         getContentPane().add(checkBillButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 570, 130, 40));
 
         totalPriceLabel.setFont(new java.awt.Font("Times New Roman", 3, 20)); // NOI18N
@@ -85,10 +85,10 @@ public class Receipt extends JFrame{
         jLabel2.setText("Receipt");
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 240, -1, -1));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/receipt.png"))); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Icon/receipt.png"))); // NOI18N
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 190, -1, -1));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/BG.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Icon/BG.png"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 920, -1));
 
         pack();
