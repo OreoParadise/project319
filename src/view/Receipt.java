@@ -7,6 +7,7 @@ package view;
 
 import java.awt.Cursor;
 import java.awt.Font;
+import java.awt.event.MouseAdapter;
 import javax.swing.GroupLayout;
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -94,7 +95,10 @@ public class Receipt extends JFrame{
         pack();
     }// </editor-fold>
     
-    
+    // Mouse listener
+    public void setClickedButton(MouseAdapter m) {
+        checkBillButton.addMouseListener(m);
+    }
     
     public String getReceiptTitle(){
         return receiptTitle.getText();

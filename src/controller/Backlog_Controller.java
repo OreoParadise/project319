@@ -5,6 +5,8 @@
  */
 package controller;
 
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import javax.swing.JFrame;
 import view.Backlog;
 import view.MainMenu;
@@ -15,17 +17,25 @@ import view.MainMenu;
  */
 public class Backlog_Controller extends JFrame{
     
-    
     private Backlog backlog;
     
     public Backlog_Controller(){
         backlog = new Backlog();
+        backlog.setClickedDone(new MouseAdapter() {
+            public void mouseClicked(MouseEvent e) {
+                doneButtonActionPerformed(e);
+            }
+        });
         backlog.setVisible(true);
     }
     
     public static void main(String[] args) {
         new Backlog_Controller();
+    }    
+
+    private void doneButtonActionPerformed(MouseEvent e) {
+        dispose();
+        Backlog_Controller bc = new Backlog_Controller();
     }
     
-
 }

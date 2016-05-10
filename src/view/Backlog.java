@@ -8,6 +8,7 @@ package view;
 import java.awt.BorderLayout;
 import java.awt.Cursor;
 import java.awt.Font;
+import java.awt.event.MouseAdapter;
 import javax.swing.BoxLayout;
 import javax.swing.GroupLayout;
 import javax.swing.ImageIcon;
@@ -93,8 +94,10 @@ public class Backlog extends JFrame{
         pack();
     }
     
-    
-    
+    // Mouse listener
+    public void setClickedDone(MouseAdapter m) {
+        doneButton.addMouseListener(m);
+    }
     
     public String getBacklogTitle(){
         return backlogTitle.getText();

@@ -5,6 +5,8 @@
  */
 package controller;
 
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import javax.swing.JFrame;
 import view.Receipt;
 
@@ -17,10 +19,20 @@ public class Receipt_Controller extends JFrame{
     
     public Receipt_Controller(){
         receipt = new Receipt();
+        receipt.setClickedButton(new MouseAdapter() {
+            public void mouseClicked(MouseEvent e) {
+                checkBillButtonActionPerformed(e);
+            }
+        });
         receipt.setVisible(true);
     }
     
     public static void main(String[] args) {
         new Receipt_Controller();
+    }
+    
+    private void checkBillButtonActionPerformed(MouseEvent e) {
+        dispose();
+        Receipt_Controller rc = new Receipt_Controller();
     }
 }
