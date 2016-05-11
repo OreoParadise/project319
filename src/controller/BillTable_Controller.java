@@ -21,8 +21,8 @@ import view.BillTable;
 public class BillTable_Controller extends JFrame {
     
     private BillTable billtable;
-    Image imgoff = new ImageIcon(this.getClass().getResource("/view/Error.png")).getImage();
-    Image imgon = new ImageIcon(this.getClass().getResource("/view/Check.png")).getImage();
+    Image imgoff = new ImageIcon(this.getClass().getResource("/view/Icon/Error.png")).getImage();
+    Image imgon = new ImageIcon(this.getClass().getResource("/view/Icon/Check.png")).getImage();
     
     public BillTable_Controller() {
         billtable = new BillTable();

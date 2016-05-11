@@ -8,6 +8,7 @@ package view;
 import java.awt.BorderLayout;
 import java.awt.Cursor;
 import java.awt.Font;
+import java.awt.event.MouseAdapter;
 import javax.swing.BoxLayout;
 import javax.swing.GroupLayout;
 import javax.swing.ImageIcon;
@@ -58,7 +59,7 @@ public class Backlog extends JFrame{
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        doneButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/done.png"))); // NOI18N
+        doneButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Icon/done.png"))); // NOI18N
         getContentPane().add(doneButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 560, 140, 40));
 
         JLabel1.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
@@ -86,15 +87,17 @@ public class Backlog extends JFrame{
         backlogTitle.setText("Backlog");
         getContentPane().add(backlogTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 180, -1, -1));
 
-        BG.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/BG.png"))); // NOI18N
+        BG.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Icon/BG.png"))); // NOI18N
         BG.setText("BG");
         getContentPane().add(BG, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 899, -1));
 
         pack();
     }
     
-    
-    
+    // Mouse listener
+    public void setClickedDone(MouseAdapter m) {
+        doneButton.addMouseListener(m);
+    }
     
     public String getBacklogTitle(){
         return backlogTitle.getText();
