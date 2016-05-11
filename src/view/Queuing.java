@@ -76,8 +76,8 @@ public class Queuing extends JFrame {
         custNameLabel.setText("Customer Name:");
         getContentPane().add(custNameLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 310, -1, -1));
 
-        menuBackground.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/reserve.png"))); // NOI18N
-        getContentPane().add(menuBackground, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 260, -1, -1));
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Icon/reserve.png"))); // NOI18N
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 260, -1, -1));
 
         MainMenuTitle.setFont(new java.awt.Font("Times New Roman", 3, 56)); // NOI18N
         MainMenuTitle.setText("Queuing");
