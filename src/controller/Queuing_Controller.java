@@ -7,6 +7,8 @@ package controller;
 
 import javax.swing.JFrame;
 import view.Queuing;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 /**
  *
@@ -17,10 +19,20 @@ public class Queuing_Controller extends JFrame{
     
     public Queuing_Controller(){
         q = new Queuing();
+        q.setClickedQueuing(new MouseAdapter(){
+            public void mouseClicked(MouseEvent evt){
+                chooseTableAction(evt);
+            }
+        });
         q.setVisible(true);
     }
     
     public static void main(String args[]){
         new Queuing_Controller();
+    }
+    
+    public void chooseTableAction(MouseEvent evt){
+        q.dispose();
+        BillTable_Controller b = new BillTable_Controller();
     }
 }

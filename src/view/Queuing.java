@@ -5,6 +5,7 @@
  */
 package view;
 
+import java.awt.event.MouseAdapter;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -26,7 +27,7 @@ public class Queuing extends JFrame {
 
         queuingTime = new JTextField();
         timeLabel = new JLabel();
-        doneButton = new JButton();
+        chooseTableButton = new JButton();
         queuingDate = new JTextField();
         customerName = new JTextField();
         phoneNumber = new JTextField();
@@ -49,8 +50,8 @@ public class Queuing extends JFrame {
         timeLabel.setText("Queuing Time:");
         getContentPane().add(timeLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 460, -1, -1));
 
-        doneButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Icon/chooseTable.png"))); // NOI18N
-        getContentPane().add(doneButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 580, 170, 30));
+        chooseTableButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Icon/chooseTable.png"))); // NOI18N
+        getContentPane().add(chooseTableButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 580, 170, 30));
 
         queuingDate.setBackground(new java.awt.Color(255, 255, 153));
         queuingDate.setFont(new java.awt.Font("Times New Roman", 0, 20)); // NOI18N
@@ -76,8 +77,8 @@ public class Queuing extends JFrame {
         custNameLabel.setText("Customer Name:");
         getContentPane().add(custNameLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 310, -1, -1));
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Icon/reserve.png"))); // NOI18N
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 260, -1, -1));
+        menuBackground.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Icon/reserve.png"))); // NOI18N
+        getContentPane().add(menuBackground, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 260, -1, -1));
 
         MainMenuTitle.setFont(new java.awt.Font("Times New Roman", 3, 56)); // NOI18N
         MainMenuTitle.setText("Queuing");
@@ -88,6 +89,10 @@ public class Queuing extends JFrame {
 
         pack();
     }// </editor-fold>
+    
+    public void setClickedQueuing(MouseAdapter m){
+        chooseTableButton.addMouseListener(m);
+    } 
      
     // Variables declaration - do not modify                     
     private JLabel MainMenuTitle;
@@ -95,7 +100,7 @@ public class Queuing extends JFrame {
     private JLabel custNameLabel;
     private JTextField customerName;
     private JLabel dateLabel;
-    private JButton doneButton;
+    private JButton chooseTableButton;
     private JLabel menuBackground;
     private JLabel phoneNumLabel;
     private JTextField phoneNumber;
