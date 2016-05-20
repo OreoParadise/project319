@@ -18,12 +18,15 @@ import javax.swing.JLabel;
 import javax.swing.SpringLayout;
 import javax.swing.SwingConstants;
 import javax.swing.WindowConstants;
+import model.ConnectDB;
+import model.Customer_Model;
+import model.Food_Model;
 
 /**
  *
  * @author Oriopun Jaja
  */
-public class Backlog extends JFrame{
+public class Backlog extends JFrame  {
     
     private JLabel backlogTitle;
     private JLabel JLabel2;
@@ -35,12 +38,25 @@ public class Backlog extends JFrame{
     private JButton doneButton;
     private JLabel BG;
     
+    private Food_Model foodModel;
+    private Customer_Model custModel;
+    private ConnectDB connectDB;
+  
+    
     
     
     public Backlog() {
         initComponents();
+        connectDB = new ConnectDB();
+        foodModel = new Food_Model();
+        custModel = new Customer_Model();
         
-        
+            connectDB.connect();
+            getNumberOfCust();
+            getPopFood();
+            getRevenue();
+            connectDB.disconnect();
+           
     }
    
     
@@ -58,7 +74,7 @@ public class Backlog extends JFrame{
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
+        
         doneButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Icon/done.png"))); // NOI18N
         getContentPane().add(doneButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 560, 140, 40));
 
@@ -97,6 +113,17 @@ public class Backlog extends JFrame{
     // Mouse listener
     public void setClickedDone(MouseAdapter m) {
         doneButton.addMouseListener(m);
+    }
+    
+    public void getNumberOfCust(){
+        noOfCusLabel.setText(custModel.getNemberOfCust()+"");
+    }
+    public void getPopFood(){
+        popFoodLabel.setText(foodModel.getPopFood()+"");
+    }
+    
+    public void getRevenue(){
+        //revenueLabel.setText("");
     }
     
     public String getBacklogTitle(){
