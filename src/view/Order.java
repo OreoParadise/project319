@@ -5,9 +5,12 @@
  */
 package view;
 
+import java.awt.event.MouseAdapter;
+import java.util.ArrayList;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
 
@@ -20,48 +23,67 @@ public class Order extends JFrame {
     public Order(){
         initComponents();
     }
+    //Method for adding mouseListener to JButton classes of Food
+    public void setFoodListener(MouseAdapter m){
+         for(JButton food : myFood){
+             food.addMouseListener(m);
+         }
+    }
+    //Method for getting button and add them as an element of arrayList
+    private JButton getFoodButton(){
+        JButton temp = new JButton();
+        myFood.add(temp);
+        return temp;
+    }
+    
+    public JTable getOrderList(){
+        return orderList;
+    }
     
     private void initComponents() {
 
-        totalPriceLabel = new javax.swing.JLabel();
-        tableNoLabel1 = new javax.swing.JLabel();
-        doneButton = new javax.swing.JButton();
-        clear = new javax.swing.JButton();
-        backButton1 = new javax.swing.JButton();
-        priceLabel = new javax.swing.JLabel();
-        BG_Panel3 = new javax.swing.JPanel();
-        espresso = new javax.swing.JButton();
-        latte = new javax.swing.JButton();
-        milkShake = new javax.swing.JButton();
-        BG_Panel2 = new javax.swing.JPanel();
-        cheese = new javax.swing.JButton();
-        friedEgg = new javax.swing.JButton();
-        frenchFried = new javax.swing.JButton();
-        sandWich = new javax.swing.JButton();
-        honey = new javax.swing.JButton();
-        hamberger = new javax.swing.JButton();
-        rice = new javax.swing.JButton();
-        popcorn = new javax.swing.JButton();
-        hotdog = new javax.swing.JButton();
-        orderListScroll = new javax.swing.JScrollPane();
-        orderList = new javax.swing.JTable();
-        BG_Panel1 = new javax.swing.JPanel();
-        bananaChoko = new javax.swing.JButton();
-        butterCake = new javax.swing.JButton();
-        candy = new javax.swing.JButton();
-        donut = new javax.swing.JButton();
-        chocolateCake = new javax.swing.JButton();
-        chocoIcecream = new javax.swing.JButton();
-        parfait = new javax.swing.JButton();
-        redVelvet = new javax.swing.JButton();
-        strawberryCake = new javax.swing.JButton();
-        vanillaIceCream = new javax.swing.JButton();
-        strawberryMousse = new javax.swing.JButton();
-        strawberryIceCream = new javax.swing.JButton();
-        orderTitle = new javax.swing.JLabel();
-        TableLabel = new javax.swing.JLabel();
-        orderBG = new javax.swing.JLabel();
-        background = new javax.swing.JLabel();
+        myFood = new ArrayList<JButton>();
+        totalPriceLabel = new JLabel();
+        tableNoLabel1 = new JLabel();
+        doneButton = new JButton();
+        clear = new JButton();
+        backButton1 = new JButton();
+        priceLabel = new JLabel();
+        BG_Panel3 = new JPanel();
+        espresso = getFoodButton();
+        latte = getFoodButton();
+        milkShake = getFoodButton();
+        BG_Panel2 = new JPanel();
+        cheese = getFoodButton();
+        friedEgg = getFoodButton();
+        frenchFried = getFoodButton();
+        sandWich = getFoodButton();
+        honey = getFoodButton();
+        hamberger = getFoodButton();
+        rice = getFoodButton();
+        popcorn = getFoodButton();
+        hotdog = getFoodButton();
+        orderListScroll = new JScrollPane();
+        orderList = new JTable();
+        BG_Panel1 = new JPanel();
+        bananaChoko = getFoodButton();
+        butterCake = getFoodButton();
+        candy = getFoodButton();
+        donut = getFoodButton();
+        chocolateCake = getFoodButton();
+        chocoIcecream = getFoodButton();
+        parfait = getFoodButton();
+        redVelvet = getFoodButton();
+        strawberryCake = getFoodButton();
+        vanillaIceCream = getFoodButton();
+        strawberryMousse = getFoodButton();
+        strawberryIceCream = getFoodButton();
+        orderTitle = new JLabel();
+        TableLabel = new JLabel();
+        orderBG = new JLabel();
+        background = new JLabel();
+        
+        
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -316,44 +338,45 @@ public class Order extends JFrame {
     }
     
     // Variables declaration - do not modify                     
-    private javax.swing.JButton backButton1;
-    private javax.swing.JButton bananaChoko;
-    private javax.swing.JButton butterCake;
-    private javax.swing.JButton candy;
-    private javax.swing.JButton cheese;
-    private javax.swing.JButton chocoIcecream;
-    private javax.swing.JButton chocolateCake;
-    private javax.swing.JButton clear;
-    private javax.swing.JButton doneButton;
-    private javax.swing.JButton donut;
-    private javax.swing.JButton espresso;
-    private javax.swing.JButton friedEgg;
-    private javax.swing.JButton hamberger;
-    private javax.swing.JButton honey;
-    private javax.swing.JButton hotdog;
-    private javax.swing.JButton frenchFried;
-    private javax.swing.JLabel background;
-    private javax.swing.JLabel TableLabel;
-    private javax.swing.JLabel orderBG;
-    private javax.swing.JLabel priceLabel;
-    private javax.swing.JPanel BG_Panel1;
-    private javax.swing.JPanel BG_Panel2;
-    private javax.swing.JPanel BG_Panel3;
-    private javax.swing.JButton latte;
-    private javax.swing.JButton milkShake;
-    private javax.swing.JTable orderList;
-    private javax.swing.JScrollPane orderListScroll;
-    private javax.swing.JLabel orderTitle;
-    private javax.swing.JButton parfait;
-    private javax.swing.JButton popcorn;
-    private javax.swing.JButton redVelvet;
-    private javax.swing.JButton rice;
-    private javax.swing.JButton sandWich;
-    private javax.swing.JButton strawberryCake;
-    private javax.swing.JButton strawberryIceCream;
-    private javax.swing.JButton strawberryMousse;
-    private javax.swing.JLabel tableNoLabel1;
-    private javax.swing.JLabel totalPriceLabel;
-    private javax.swing.JButton vanillaIceCream;
+    private JButton backButton1;
+    private JButton bananaChoko;
+    private JButton butterCake;
+    private JButton candy;
+    private JButton cheese;
+    private JButton chocoIcecream;
+    private JButton chocolateCake;
+    private JButton clear;
+    private JButton doneButton;
+    private JButton donut;
+    private JButton espresso;
+    private JButton friedEgg;
+    private JButton hamberger;
+    private JButton honey;
+    private JButton hotdog;
+    private JButton frenchFried;
+    private JLabel background;
+    private JLabel TableLabel;
+    private JLabel orderBG;
+    private JLabel priceLabel;
+    private JPanel BG_Panel1;
+    private JPanel BG_Panel2;
+    private JPanel BG_Panel3;
+    private JButton latte;
+    private JButton milkShake;
+    private JTable orderList;
+    private JScrollPane orderListScroll;
+    private JLabel orderTitle;
+    private JButton parfait;
+    private JButton popcorn;
+    private JButton redVelvet;
+    private JButton rice;
+    private JButton sandWich;
+    private JButton strawberryCake;
+    private JButton strawberryIceCream;
+    private JButton strawberryMousse;
+    private JLabel tableNoLabel1;
+    private JLabel totalPriceLabel;
+    private JButton vanillaIceCream;
+    ArrayList<JButton> myFood;
 
 }
