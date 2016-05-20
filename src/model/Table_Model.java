@@ -5,35 +5,27 @@
  */
 package model;
 
-/**
+import java.util.HashMap;
+import static model.ConnectDB.db;
+
+/*1*
  *
  * @author m
  */
 public class Table_Model {
-        private int tableNo;
-        private boolean isEmpty;
+
+    private int tableNo;
+    private boolean isEmpty;
 
     public Table_Model(int tableNo, boolean isEmpty) {
         this.tableNo = tableNo;
         this.isEmpty = isEmpty;
     }
 
-    public int getTableNo() {
-        return tableNo;
+    public int getTableNo(int tableNo) {
+        String sql = "SELECT TABLENO FROM OREO_TABLE WHERE TABLENO = " + tableNo;
+        HashMap table = db.queryRow(sql);
+        return Integer.parseInt(String.valueOf(table.get("TABLENO")));
     }
-
-    public boolean isIsEmpty() {
-        return isEmpty;
-    }
-
-    public void setTableNo(int tableNo) {
-        this.tableNo = tableNo;
-    }
-
-    public void setIsEmpty(boolean isEmpty) {
-        this.isEmpty = isEmpty;
-    }
-        
-        
-        
+    
 }

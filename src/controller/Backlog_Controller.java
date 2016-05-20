@@ -15,9 +15,12 @@ import view.MainMenu;
  *
  * @author Oriopun Jaja
  */
+import model.Customer_Model;
 public class Backlog_Controller extends JFrame{
     
     private Backlog backlog;
+    
+   private Customer_Model backlogData;
     
     public Backlog_Controller(){
         backlog = new Backlog();
@@ -26,8 +29,11 @@ public class Backlog_Controller extends JFrame{
                 doneButtonActionPerformed(e);
             }
         });
+        
+        
         backlog.setVisible(true);
     }
+    
     
     public static void main(String[] args) {
         new Backlog_Controller();
@@ -35,7 +41,7 @@ public class Backlog_Controller extends JFrame{
 
     private void doneButtonActionPerformed(MouseEvent e) {
         dispose();
-        Backlog_Controller bc = new Backlog_Controller();
+        //Backlog_Controller bc = new Backlog_Controller();
     }
     
 }
