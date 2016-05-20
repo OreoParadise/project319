@@ -21,7 +21,7 @@ public class Queuing_Controller extends JFrame{
         q = new Queuing();
         q.setClickedQueuing(new MouseAdapter(){
             public void mouseClicked(MouseEvent evt){
-                chooseTableAction(evt);
+                callChooseTable(evt);
             }
         });
         q.setVisible(true);
@@ -31,7 +31,7 @@ public class Queuing_Controller extends JFrame{
         new Queuing_Controller();
     }
     
-    public void chooseTableAction(MouseEvent evt){
+    public void callChooseTable(MouseEvent evt){
         q.dispose();
         BillTable_Controller b = new BillTable_Controller();
     }

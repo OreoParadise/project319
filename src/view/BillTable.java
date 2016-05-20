@@ -33,7 +33,7 @@ public class BillTable extends JFrame {
     Table4 = new JToggleButton();
     Table6 = new JToggleButton();
     Table7 = new JToggleButton();
-    doneButton = new JButton();
+    chooseTableButton = new JButton();
     jLabel2 = new JLabel();
     jLabel1 = new JLabel();
     jLabel3 = new JLabel();
@@ -78,8 +78,8 @@ public class BillTable extends JFrame {
         Table2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Icon/Error.png"))); // NOI18N
         getContentPane().add(Table2, new org.netbeans.lib.awtextra.AbsoluteConstraints(423, 262, 30, 30));
 
-        doneButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Icon/done.png"))); // NOI18N
-        getContentPane().add(doneButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 570, 140, 40));
+        chooseTableButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Icon/done.png"))); // NOI18N
+        getContentPane().add(chooseTableButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 570, 140, 40));
         
         jLabel3.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         jLabel3.setText("choose table to check bill");
@@ -125,7 +125,7 @@ public class BillTable extends JFrame {
     private JToggleButton Table5;
     private JToggleButton Table6;
     private JToggleButton Table7;
-    private JButton doneButton;
+    private JButton chooseTableButton;
     private JLabel jLabel1;
     private JLabel jLabel2;
     private JLabel jLabel3;
