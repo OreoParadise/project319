@@ -134,7 +134,7 @@ public class BillTable extends JFrame {
     private JToggleButton Table5;
     private JToggleButton Table6;
     private JToggleButton Table7;
-    private JButton doneButton;
+    private JButton chooseTableButton;
     private JLabel jLabel1;
     private JLabel jLabel2;
     private JLabel jLabel3;

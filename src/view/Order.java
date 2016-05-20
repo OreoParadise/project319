@@ -24,45 +24,45 @@ public class Order extends JFrame {
     
     private void initComponents() {
 
-        totalPriceLabel = new JLabel();
-        tableNoLabel1 = new JLabel();
-        doneButton = new JButton();
-        clear = new JButton();
-        backButton1 = new JButton();
-        jLabel5 = new JLabel();
-        jPanel3 = new JPanel();
-        espresso = new JButton();
-        latte = new JButton();
-        mikeShake = new JButton();
-        jPanel2 = new JPanel();
-        cheese = new JButton();
-        friedEgg = new JButton();
-        jButton31 = new JButton();
-        sandWich = new JButton();
-        honey = new JButton();
-        hamberger = new JButton();
-        rice = new JButton();
-        popcorn = new JButton();
-        hotdog = new JButton();
-        orderListScroll = new JScrollPane();
-        orderList = new JTable();
-        jPanel1 = new JPanel();
-        bananaChoko = new JButton();
-        butterCake = new JButton();
-        candy = new JButton();
-        donut = new JButton();
-        chocolateCake = new JButton();
-        chocoIcecream = new JButton();
-        parfait = new JButton();
-        redVelvet = new JButton();
-        strawberryCake = new JButton();
-        vanillaIceCream = new JButton();
-        strawberryMousse = new JButton();
-        strawberryIceCream = new JButton();
-        orderTitle = new JLabel();
-        jLabel3 = new JLabel();
-        jLabel4 = new JLabel();
-        jLabel1 = new JLabel();
+        totalPriceLabel = new javax.swing.JLabel();
+        tableNoLabel1 = new javax.swing.JLabel();
+        doneButton = new javax.swing.JButton();
+        clear = new javax.swing.JButton();
+        backButton1 = new javax.swing.JButton();
+        priceLabel = new javax.swing.JLabel();
+        BG_Panel3 = new javax.swing.JPanel();
+        espresso = new javax.swing.JButton();
+        latte = new javax.swing.JButton();
+        milkShake = new javax.swing.JButton();
+        BG_Panel2 = new javax.swing.JPanel();
+        cheese = new javax.swing.JButton();
+        friedEgg = new javax.swing.JButton();
+        frenchFried = new javax.swing.JButton();
+        sandWich = new javax.swing.JButton();
+        honey = new javax.swing.JButton();
+        hamberger = new javax.swing.JButton();
+        rice = new javax.swing.JButton();
+        popcorn = new javax.swing.JButton();
+        hotdog = new javax.swing.JButton();
+        orderListScroll = new javax.swing.JScrollPane();
+        orderList = new javax.swing.JTable();
+        BG_Panel1 = new javax.swing.JPanel();
+        bananaChoko = new javax.swing.JButton();
+        butterCake = new javax.swing.JButton();
+        candy = new javax.swing.JButton();
+        donut = new javax.swing.JButton();
+        chocolateCake = new javax.swing.JButton();
+        chocoIcecream = new javax.swing.JButton();
+        parfait = new javax.swing.JButton();
+        redVelvet = new javax.swing.JButton();
+        strawberryCake = new javax.swing.JButton();
+        vanillaIceCream = new javax.swing.JButton();
+        strawberryMousse = new javax.swing.JButton();
+        strawberryIceCream = new javax.swing.JButton();
+        orderTitle = new javax.swing.JLabel();
+        TableLabel = new javax.swing.JLabel();
+        orderBG = new javax.swing.JLabel();
+        background = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -83,21 +83,21 @@ public class Order extends JFrame {
         backButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Icon/back.png"))); // NOI18N
         getContentPane().add(backButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 650, 70, 25));
 
-        jLabel5.setFont(new java.awt.Font("Times New Roman", 0, 20)); // NOI18N
-        jLabel5.setText("Total price: ");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 560, -1, -1));
+        priceLabel.setFont(new java.awt.Font("Times New Roman", 0, 20)); // NOI18N
+        priceLabel.setText("Total price: ");
+        getContentPane().add(priceLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 560, -1, -1));
 
-        jPanel3.setBackground(new java.awt.Color(255, 255, 204));
-        jPanel3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        BG_Panel3.setBackground(new java.awt.Color(255, 255, 204));
+        BG_Panel3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         espresso.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Beverage/Espresso.png"))); // NOI18N
 
         latte.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Beverage/Latte.png"))); // NOI18N
 
-        mikeShake.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Beverage/MikeShake.png"))); // NOI18N
+        milkShake.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Beverage/MikeShake.png"))); // NOI18N
 
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(BG_Panel3);
+        BG_Panel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
@@ -106,7 +106,7 @@ public class Order extends JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(latte, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(mikeShake, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(milkShake, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(19, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
@@ -116,20 +116,20 @@ public class Order extends JFrame {
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(espresso, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(latte, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(mikeShake, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(milkShake, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 500, 200, 70));
+        getContentPane().add(BG_Panel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 500, 200, 70));
 
-        jPanel2.setBackground(new java.awt.Color(255, 255, 204));
-        jPanel2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        BG_Panel2.setBackground(new java.awt.Color(255, 255, 204));
+        BG_Panel2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         cheese.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Food/Cheese.png"))); // NOI18N
 
         friedEgg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Food/FriedEgg.png"))); // NOI18N
 
-        jButton31.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Food/Freshfried.png"))); // NOI18N
+        frenchFried.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Food/Freshfried.png"))); // NOI18N
 
         sandWich.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Food/SandWich.png"))); // NOI18N
 
@@ -143,8 +143,8 @@ public class Order extends JFrame {
 
         hotdog.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Food/Hotdog.png"))); // NOI18N
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(BG_Panel2);
+        BG_Panel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
@@ -160,7 +160,7 @@ public class Order extends JFrame {
                     .addComponent(popcorn, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton31, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(frenchFried, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(sandWich, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(hotdog, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(18, Short.MAX_VALUE))
@@ -171,7 +171,7 @@ public class Order extends JFrame {
                 .addContainerGap()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(jButton31, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(frenchFried, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(sandWich, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -192,7 +192,7 @@ public class Order extends JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 330, 200, 170));
+        getContentPane().add(BG_Panel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 330, 200, 170));
 
         orderList.setBackground(new java.awt.Color(255, 204, 204));
         orderList.setModel(new javax.swing.table.DefaultTableModel(
@@ -207,8 +207,8 @@ public class Order extends JFrame {
 
         getContentPane().add(orderListScroll, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 300, 240, 240));
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 204));
-        jPanel1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        BG_Panel1.setBackground(new java.awt.Color(255, 255, 204));
+        BG_Panel1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         bananaChoko.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Dessert/BananaChoko.png"))); // NOI18N
 
@@ -234,84 +234,84 @@ public class Order extends JFrame {
 
         strawberryIceCream.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Dessert/StrawberryIceCream.png"))); // NOI18N
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+        javax.swing.GroupLayout BGLayout = new javax.swing.GroupLayout(BG_Panel1);
+        BG_Panel1.setLayout(BGLayout);
+        BGLayout.setHorizontalGroup(
+            BGLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(BGLayout.createSequentialGroup()
                 .addGap(21, 21, 21)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGroup(BGLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BGLayout.createSequentialGroup()
                         .addComponent(vanillaIceCream, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(strawberryMousse, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(strawberryIceCream, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BGLayout.createSequentialGroup()
+                        .addGroup(BGLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(bananaChoko, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(chocoIcecream, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(parfait, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(BGLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(butterCake, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(chocolateCake, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(redVelvet, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(BGLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(candy, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(donut, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(strawberryCake, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(16, Short.MAX_VALUE))
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+        BGLayout.setVerticalGroup(
+            BGLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(BGLayout.createSequentialGroup()
                 .addGap(23, 23, 23)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(BGLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(BGLayout.createSequentialGroup()
                         .addComponent(candy, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(donut, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(strawberryCake, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addGroup(jPanel1Layout.createSequentialGroup()
+                    .addGroup(BGLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGroup(BGLayout.createSequentialGroup()
                             .addComponent(butterCake, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                             .addComponent(chocolateCake, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                             .addComponent(redVelvet, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(BGLayout.createSequentialGroup()
                             .addComponent(bananaChoko, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                             .addComponent(chocoIcecream, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                             .addComponent(parfait, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(BGLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(strawberryIceCream, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(BGLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                         .addComponent(strawberryMousse, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(vanillaIceCream, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(19, Short.MAX_VALUE))
         );
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 330, 200, 240));
+        getContentPane().add(BG_Panel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 330, 200, 240));
 
         orderTitle.setFont(new java.awt.Font("Times New Roman", 3, 56)); // NOI18N
         orderTitle.setText("Order");
         getContentPane().add(orderTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 170, 150, 70));
 
-        jLabel3.setFont(new java.awt.Font("Times New Roman", 0, 20)); // NOI18N
-        jLabel3.setText("Table No. ");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 290, -1, 20));
+        TableLabel.setFont(new java.awt.Font("Times New Roman", 0, 20)); // NOI18N
+        TableLabel.setText("Table No. ");
+        getContentPane().add(TableLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 290, -1, 20));
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Icon/Order.png"))); // NOI18N
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 230, -1, -1));
+        orderBG.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Icon/Order.png"))); // NOI18N
+        getContentPane().add(orderBG, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 230, -1, -1));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Icon/BG.png"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Icon/BG.png"))); // NOI18N
+        getContentPane().add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
     }
