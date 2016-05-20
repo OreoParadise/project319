@@ -117,6 +117,10 @@ public class BillTable extends javax.swing.JFrame {
         }
         db.disconnect();
     }
+    
+    public void testUpdateTable(){
+        
+    }
 
     public int getCurrentTable(){
         return currentTable;
