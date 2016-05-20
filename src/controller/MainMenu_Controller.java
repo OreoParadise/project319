@@ -45,9 +45,8 @@ public class MainMenu_Controller extends JFrame{
     }
     
     private void billingButtonActionPerformed(MouseEvent evt) {
-    dispose();
-    BillTable_Controller billtable = new BillTable_Controller();
-    
+        dispose();
+        BillTable_Controller billtable = new BillTable_Controller();
     }
     
     private void backlogButtonActionPerformed(MouseEvent evt) {
@@ -59,8 +58,6 @@ public class MainMenu_Controller extends JFrame{
         dispose();
         Queuing_Controller queuing = new Queuing_Controller();
     }
-    
-   
-    }
+}
     
 

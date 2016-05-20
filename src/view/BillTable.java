@@ -96,10 +96,10 @@ public class BillTable extends JFrame {
     }
     //Method for clicked event in table toggle buttons
     public void setClickedTable1(MouseAdapter m){
-    Table1.addMouseListener(m);
+        Table1.addMouseListener(m);
     }
     public void setClickedTable2(MouseAdapter m){
-    Table2.addMouseListener(m);
+        Table2.addMouseListener(m);
     }
     public void setClickedTable3(MouseAdapter m){
     Table3.addMouseListener(m);

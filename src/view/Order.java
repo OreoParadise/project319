@@ -36,6 +36,13 @@ public class Order extends JFrame {
         return temp;
     }
     
+    public JLabel getPriceLabel(){
+        return priceLabel;
+    }
+    public void setPriceLabel(String price){
+        priceLabel.setText(price);
+    }
+    
     public JTable getOrderList(){
         return orderList;
     }
