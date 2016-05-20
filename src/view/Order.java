@@ -29,15 +29,15 @@ public class Order extends JFrame {
         doneButton = new javax.swing.JButton();
         clear = new javax.swing.JButton();
         backButton1 = new javax.swing.JButton();
-        priceLabel = new javax.swing.JLabel();
-        BG_Panel3 = new javax.swing.JPanel();
+        JLabel priceLabel = new javax.swing.JLabel();
+        JPanel BG_Panel3 = new javax.swing.JPanel();
         espresso = new javax.swing.JButton();
         latte = new javax.swing.JButton();
-        milkShake = new javax.swing.JButton();
-        BG_Panel2 = new javax.swing.JPanel();
+        JButton milkShake = new javax.swing.JButton();
+        JPanel BG_Panel2 = new javax.swing.JPanel();
         cheese = new javax.swing.JButton();
         friedEgg = new javax.swing.JButton();
-        frenchFried = new javax.swing.JButton();
+        JButton frenchFried = new javax.swing.JButton();
         sandWich = new javax.swing.JButton();
         honey = new javax.swing.JButton();
         hamberger = new javax.swing.JButton();
@@ -46,7 +46,7 @@ public class Order extends JFrame {
         hotdog = new javax.swing.JButton();
         orderListScroll = new javax.swing.JScrollPane();
         orderList = new javax.swing.JTable();
-        BG_Panel1 = new javax.swing.JPanel();
+        JPanel BG_Panel1 = new javax.swing.JPanel();
         bananaChoko = new javax.swing.JButton();
         butterCake = new javax.swing.JButton();
         candy = new javax.swing.JButton();
@@ -60,9 +60,9 @@ public class Order extends JFrame {
         strawberryMousse = new javax.swing.JButton();
         strawberryIceCream = new javax.swing.JButton();
         orderTitle = new javax.swing.JLabel();
-        TableLabel = new javax.swing.JLabel();
-        orderBG = new javax.swing.JLabel();
-        background = new javax.swing.JLabel();
+        JLabel TableLabel = new javax.swing.JLabel();
+        JLabel orderBG = new javax.swing.JLabel();
+        JLabel background = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);

@@ -33,7 +33,7 @@ public class BillTable extends JFrame {
         Table4 = new JToggleButton();
         Table6 = new JToggleButton();
         Table7 = new JToggleButton();
-        doneButton = new JButton();
+        JButton doneButton = new JButton();
         jLabel2 = new JLabel();
         jLabel1 = new JLabel();
         jLabel3 = new JLabel();
