@@ -35,10 +35,6 @@ public class ReserveTable_Model {
         return customerID;
     }
 
-    public String getDate() {
-        return date;
-    }
-
     public void setReserveID(int reserveID) {
         this.reserveID = reserveID;
     }
@@ -51,9 +47,6 @@ public class ReserveTable_Model {
         this.customerID = customerID;
     }
 
-    public void setDate(String date) {
-        this.date = date;
-    }
     
     
 
