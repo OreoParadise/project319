@@ -33,7 +33,12 @@ public class Order_Controller extends JFrame {
         order = new Order();
         tableOrder = order.getOrderList();
         price = order.getPriceLabel();
-        order.setFoodListener(new mouseAction());
+        order.setFoodListener(new MouseAction());
+        order.setClearListener(new MouseAdapter(){
+            public void mouseClicked(MouseEvent evt){
+                clearTablePerformed(evt);
+            }
+        });
         order.setVisible(true);
         
     }
@@ -55,7 +60,13 @@ public class Order_Controller extends JFrame {
         order.setPriceLabel("Total Price: " + (totalPrice += 20));
     }
     
-    private class mouseAction extends MouseAdapter{
+    private void clearTablePerformed(MouseEvent evt){
+        DefaultTableModel model = (DefaultTableModel) tableOrder.getModel();
+        model.setRowCount(0);
+        order.setPriceLabel("Total Price: " + 0);
+    }
+    
+    private class MouseAction extends MouseAdapter{
         public void mouseClicked(MouseEvent evt){
             buttonActionPerformed(evt);
         }   
