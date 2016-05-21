@@ -38,24 +38,13 @@ public class Backlog extends JFrame  {
     private JButton doneButton;
     private JLabel BG;
     
-    private Food_Model foodModel;
-    private Customer_Model custModel;
-    private ConnectDB connectDB;
+
   
     
     
     
     public Backlog() {
         initComponents();
-        connectDB = new ConnectDB();
-        foodModel = new Food_Model();
-        custModel = new Customer_Model();
-        
-            connectDB.connect();
-            showNumberOfCust();
-            showPopFood();
-            showRevenue();
-            connectDB.disconnect();
            
     }
    
@@ -115,16 +104,19 @@ public class Backlog extends JFrame  {
         doneButton.addMouseListener(m);
     }
     
-    public void showNumberOfCust(){
-        noOfCusLabel.setText(custModel.getNemberOfCust()+"");
-    }
-    public void showPopFood(){
-        popFoodLabel.setText(foodModel.getPopFood()+"");
+    public JLabel getPopFoodLabel(){
+        return popFoodLabel;
     }
     
-    public void showRevenue(){
-        //revenueLabel.setText("");
+    public JLabel getCustomerNumberLabel(){
+        return noOfCusLabel;
     }
+    
+    public JLabel getRevenueLabel(){
+        return revenueLabel;
+    }
+    
+   
     
     public String getBacklogTitle(){
         return backlogTitle.getText();

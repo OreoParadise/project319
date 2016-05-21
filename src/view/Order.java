@@ -20,9 +20,12 @@ import javax.swing.JTable;
  */
 public class Order extends JFrame {
     
+    
+    private int i = 1;
     public Order(){
         initComponents();
     }
+    
     //Method for adding mouseListener to JButton classes of Food
     public void setFoodListener(MouseAdapter m){
          for(JButton food : myFood){
@@ -42,6 +45,8 @@ public class Order extends JFrame {
     //Method for getting button and add them as an element of arrayList
     private JButton getFoodButton(){
         JButton temp = new JButton();
+        temp.setText(i+"");
+        i++;
         myFood.add(temp);
         return temp;
     }
@@ -59,42 +64,45 @@ public class Order extends JFrame {
     
     private void initComponents() {
 
-        myFood = new ArrayList<JButton>();
+        myFood = new ArrayList<JButton>();      //ID
+        bananaChoko = getFoodButton();          //1
+        butterCake = getFoodButton();           //2
+        candy = getFoodButton();                //3
+        chocoIcecream = getFoodButton();        //4
+        chocolateCake = getFoodButton();        //5
+        donut = getFoodButton();                //6
+        parfait = getFoodButton();              //7
+        redVelvet = getFoodButton();            //8
+        strawberryCake = getFoodButton();       //9
+        strawberryIceCream = getFoodButton();   //10
+        strawberryMousse = getFoodButton();     //11
+        vanillaIceCream = getFoodButton();      //12
+        cheese = getFoodButton();               //13
+        frenchFried = getFoodButton();          //14
+        friedEgg = getFoodButton();             //15
+        hamberger = getFoodButton();            //16
+        honey = getFoodButton();                //17
+        hotdog = getFoodButton();               //18
+        popcorn = getFoodButton();              //19
+        rice = getFoodButton();                 //20
+        sandWich = getFoodButton();             //21
+        espresso = getFoodButton();             //22
+        latte = getFoodButton();                //23
+        milkShake = getFoodButton();            //24
+        
+        doneButton = new JButton();
+        backButton1 = new JButton();
+        clear = new JButton();
+        
         totalPriceLabel = new JLabel();
         tableNoLabel1 = new JLabel();
-        doneButton = new JButton();
-        clear = new JButton();
-        backButton1 = new JButton();
+        
         priceLabel = new JLabel();
-        BG_Panel3 = new JPanel();
-        espresso = getFoodButton();
-        latte = getFoodButton();
-        milkShake = getFoodButton();
+        BG_Panel3 = new JPanel();  
         BG_Panel2 = new JPanel();
-        cheese = getFoodButton();
-        friedEgg = getFoodButton();
-        frenchFried = getFoodButton();
-        sandWich = getFoodButton();
-        honey = getFoodButton();
-        hamberger = getFoodButton();
-        rice = getFoodButton();
-        popcorn = getFoodButton();
-        hotdog = getFoodButton();
         orderListScroll = new JScrollPane();
         orderList = new JTable();
         BG_Panel1 = new JPanel();
-        bananaChoko = getFoodButton();
-        butterCake = getFoodButton();
-        candy = getFoodButton();
-        donut = getFoodButton();
-        chocolateCake = getFoodButton();
-        chocoIcecream = getFoodButton();
-        parfait = getFoodButton();
-        redVelvet = getFoodButton();
-        strawberryCake = getFoodButton();
-        vanillaIceCream = getFoodButton();
-        strawberryMousse = getFoodButton();
-        strawberryIceCream = getFoodButton();
         orderTitle = new JLabel();
         TableLabel = new JLabel();
         orderBG = new JLabel();

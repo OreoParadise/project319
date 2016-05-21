@@ -6,7 +6,6 @@
 package controller;
 
 import java.awt.Button;
-import java.awt.event.ActionEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import javax.swing.JFrame;
@@ -23,7 +22,7 @@ import view.Order;
 public class Order_Controller extends JFrame {
     
     private Order order;
-    private int foodNumber = 0;
+    private int foodNumber = 1;
     private int totalPrice = 0;
     private String foodName = "";
     JTable tableOrder;
@@ -49,7 +48,6 @@ public class Order_Controller extends JFrame {
     
     
     private void buttonActionPerformed(MouseEvent evt){
-        foodName = ""; // !!! 
         Object[] row = {foodNumber, foodName,20};
         DefaultTableModel myTable = (DefaultTableModel) tableOrder.getModel();
         myTable.addRow(row);

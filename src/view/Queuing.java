@@ -26,7 +26,6 @@ public class Queuing extends JFrame {
     private ConnectDB connectDB;
     
     public Queuing(){
-        
         connectDB = new ConnectDB();
         reserveModel = new ReserveTable_Model();
         
