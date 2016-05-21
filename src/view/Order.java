@@ -21,7 +21,7 @@ import javax.swing.JTable;
 public class Order extends JFrame {
     
     
-    private int i = 1;
+    private int buttonID = 1;
     public Order(){
         initComponents();
     }
@@ -45,8 +45,8 @@ public class Order extends JFrame {
     //Method for getting button and add them as an element of arrayList
     private JButton getFoodButton(){
         JButton temp = new JButton();
-        temp.setText(i+"");
-        i++;
+        temp.setText(buttonID+"");
+        buttonID++;
         myFood.add(temp);
         return temp;
     }
@@ -114,7 +114,7 @@ public class Order extends JFrame {
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        totalPriceLabel.setFont(new java.awt.Font("Times New Roman", 1, 20)); // NOI18N
+        totalPriceLabel.setFont(new java.awt.Font("Times New Roman", 2, 20)); // NOI18N
         getContentPane().add(totalPriceLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 532, 50, 20));
 
         tableNoLabel1.setFont(new java.awt.Font("Times New Roman", 1, 20)); // NOI18N

@@ -8,6 +8,8 @@ package controller;
 import java.awt.Button;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.util.ArrayList;
+import java.util.Iterator;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -15,6 +17,8 @@ import javax.swing.JOptionPane;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 import view.Order;
+import model.ConnectDB;
+import model.Food_Model;
 
 /**
  *
@@ -23,15 +27,20 @@ import view.Order;
 public class Order_Controller extends JFrame {
     
     private Order order;
+    private ConnectDB connectDB;
+    private Food_Model foodDAO;
     private int foodNumber = 1;
-    private int totalPrice = 0;
+    private double totalPrice = 0;
+    private double foodPrice;
     private String foodName = "";
     private String foodID;
+    private ArrayList<String> orderHistory;
     JTable tableOrder;
     JLabel price;
     
     public Order_Controller() {
         order = new Order();
+        orderHistory = new ArrayList<String>();
         tableOrder = order.getOrderList();
         price = order.getPriceLabel();
         order.setFoodListener(new MouseAction());
@@ -51,25 +60,37 @@ public class Order_Controller extends JFrame {
     
     private void buttonActionPerformed(MouseEvent evt){
         JButton btn = (JButton)evt.getSource();
+        connectDB.connect();
+        foodDAO = new Food_Model();
         foodID = btn.getText();
+        orderHistory.add(foodID);
         //Now compare foodID with database to get foodName
-        
-        Object[] row = {foodNumber, foodName,20};
+        foodName = foodDAO.getFoodName(Integer.parseInt(foodID));
+        foodPrice = foodDAO.getFoodPrice(Integer.parseInt(foodID));
+        Object[] row = {foodNumber, foodName, foodPrice};
         DefaultTableModel myTable = (DefaultTableModel) tableOrder.getModel();
         myTable.addRow(row);
         foodNumber++;
-        order.setPriceLabel("Total Price: " + (totalPrice += 20));
+        order.setPriceLabel("Total Price: " + (totalPrice += foodPrice));
+        connectDB.disconnect();
     }
     
     private void clearTablePerformed(MouseEvent evt){
         DefaultTableModel model = (DefaultTableModel) tableOrder.getModel();
         model.setRowCount(0);
         order.setPriceLabel("Total Price: " + 0);
+        orderHistory.clear();
+        totalPrice = 0;
         foodNumber = 1;
     }
     
     private void doneActionPerformed(MouseEvent evt){
         //Use the data in table and add them into the database
+        connectDB.connect();
+        for(String it: orderHistory){
+            
+        }
+        connectDB.disconnect();
         order.dispose();
     }
     
