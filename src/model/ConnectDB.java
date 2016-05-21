@@ -2,6 +2,7 @@
 package model;
 
 import edu.sit.cs.db.CSDbDelegate;
+import java.util.HashMap; 
 
 public class ConnectDB {
     
@@ -19,5 +20,7 @@ public class ConnectDB {
     public static void disconnect() {
         System.out.println(db.disconnect());
     }
+    
+
 
 }

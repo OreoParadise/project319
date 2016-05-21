@@ -22,14 +22,13 @@ public class Customer_Model {
         super();
     }
 
-    public Customer_Model(int customerID, String customerName, String phoneNumber) {
-        super();
-        this.customerID = customerID;
-        this.customerName = customerName;
-        this.phoneNumber = phoneNumber;
-    }
 
-    public int getCustomerID(int customerID) {
+    public void setCustomerID(int customerID) {
+        this.customerID = customerID;
+        
+    }
+   
+    public int getCustomerID() {
         
         String sql = "SELECT CUSTOMERID FROM OREO_CUSTOMER WHERE CUSTOMERID = " + customerID;
         HashMap custID = db.queryRow(sql);
@@ -49,12 +48,19 @@ public class Customer_Model {
         return String.valueOf(custName.get("CUSTOMERNAME"));
     }
     
-    public void setCustomerID(int customerID) {
-        this.customerID = customerID;
+    public String getPhoneNumber(){
+        String sql = "SELECT PHONENUMBER FROM OREO_CUSTOMER WHERE CUSTOMERID = " +customerID;
+        HashMap phoneNumber = db.queryRow(sql);
+        return String.valueOf(phoneNumber.get("PHONENUMBER"));
     }
+    
+   
+    
     
     
    
+    
+    
     
     
 }

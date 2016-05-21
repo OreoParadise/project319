@@ -52,9 +52,9 @@ public class Backlog extends JFrame  {
         custModel = new Customer_Model();
         
             connectDB.connect();
-            getNumberOfCust();
-            getPopFood();
-            getRevenue();
+            showNumberOfCust();
+            showPopFood();
+            showRevenue();
             connectDB.disconnect();
            
     }
@@ -115,14 +115,14 @@ public class Backlog extends JFrame  {
         doneButton.addMouseListener(m);
     }
     
-    public void getNumberOfCust(){
+    public void showNumberOfCust(){
         noOfCusLabel.setText(custModel.getNemberOfCust()+"");
     }
-    public void getPopFood(){
+    public void showPopFood(){
         popFoodLabel.setText(foodModel.getPopFood()+"");
     }
     
-    public void getRevenue(){
+    public void showRevenue(){
         //revenueLabel.setText("");
     }
     

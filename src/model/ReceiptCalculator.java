@@ -15,6 +15,7 @@ import static model.ConnectDB.db;
 public class ReceiptCalculator {
     
     private double totalPrice;
+    private int receiptNo;
             
     public ReceiptCalculator(){
         super();
@@ -27,9 +28,19 @@ public class ReceiptCalculator {
         
     }   
         
-    public double getTotalRevenue(){
-        return 1;
+    public double getTotalRevenue(){ 
+        String sql = "SELECT sum(COST) sumcost FROM OREO_BILLING WHERE ISCHECKED =1";
+        HashMap totalRevenue = db.queryRow(sql);
+        return Double.parseDouble(String.valueOf(totalRevenue.get("sumcost")));
     }
+
+    public void setReceiptNo(int receiptNo) {
+        this.receiptNo = receiptNo;
+    }
+    
+    
+    
+    
    
    
     

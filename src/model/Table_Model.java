@@ -21,11 +21,20 @@ public class Table_Model {
         this.tableNo = tableNo;
         this.isEmpty = isEmpty;
     }
+    
+    public void setTableNo(int tableNo){
+        this.tableNo = tableNo;
+    }
 
-    public int getTableNo(int tableNo) {
+    public int getTableNo() {
         String sql = "SELECT TABLENO FROM OREO_TABLE WHERE TABLENO = " + tableNo;
         HashMap table = db.queryRow(sql);
         return Integer.parseInt(String.valueOf(table.get("TABLENO")));
+    }
+    public int getStatus(){
+        String sql = "SELECT STATUS FROM OREO_TABLE WHERE TABLENO = " + tableNo;
+        HashMap status = db.queryRow(sql);
+        return Integer.parseInt(String.valueOf(status.get("STATUS")));
     }
     
 }
