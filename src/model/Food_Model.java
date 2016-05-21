@@ -30,6 +30,22 @@ public class Food_Model {
         return Integer.parseInt(String.valueOf(foodID.get("FOODID")));
         
     }
+    
+    public String getFoodName(int foodID) {
+        
+        String sql = "SELECT FOODNAME FROM OREO_FOOD WHERE FOODID = " + foodID;
+        HashMap foodName = db.queryRow(sql);
+        return String.valueOf(foodName.get("FOODNAME"));
+        
+    }
+    
+    public double getFoodPrice(int foodID) {
+        
+        String sql = "SELECT PRICE FROM OREO_FOOD WHERE FOODID = " + foodID;
+        HashMap price = db.queryRow(sql);
+        return Double.parseDouble(String.valueOf(price.get("PRICE")));
+        
+    }
    
     public String getPopFood(){    
         String sql = "SELECT FOODNAME FROM OREO_ORDER,OREO_FOOD WHERE OREO_ORDER.FOODID = OREO_FOOD.FOODID GROUP BY OREO_FOOD.FOODID ORDER BY COUNT(OREO_FOOD.FOODID) DESC LIMIT 1";
@@ -37,6 +53,8 @@ public class Food_Model {
         return String.valueOf(popFood.get("FOODNAME"));
           
     } 
+    
+    
 
     public void setFoodID(int foodID) {
         this.foodID = foodID;
