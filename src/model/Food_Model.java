@@ -37,6 +37,10 @@ public class Food_Model {
         return String.valueOf(popFood.get("FOODNAME"));
           
     } 
+
+    public void setFoodID(int foodID) {
+        this.foodID = foodID;
+    }
     
     
     

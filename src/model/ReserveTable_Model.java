@@ -5,6 +5,10 @@
  */
 package model;
 
+import java.util.HashMap;
+import static model.ConnectDB.db;
+
+
 /**
  *
  * @author Oriopun Jaja
@@ -15,39 +19,48 @@ public class ReserveTable_Model {
     private int tableNo;
     private int customerID;
     private String date;
+    private ConnectDB connectDB;
 
-    public ReserveTable_Model(int reserveID, int tableNo, int customerID, String date) {
-        this.reserveID = reserveID;
-        this.tableNo = tableNo;
-        this.customerID = customerID;
-        this.date = date;
-    }
-
-    public int getReserveID() {
-        return reserveID;
-    }
-
-    public int getTableNo() {
-        return tableNo;
-    }
-
-    public int getCustomerID() {
-        return customerID;
-    }
 
     public void setReserveID(int reserveID) {
         this.reserveID = reserveID;
     }
-
-    public void setTableNo(int tableNo) {
-        this.tableNo = tableNo;
+    
+    public String getDate(int reserveID){
+        String sql = "SELECT DATE FROM OREO_RESERVE WHERE RESERVEID = " +reserveID;
+        HashMap date = db.queryRow(sql);
+        //System.out.println(String.valueOf(date.get("CUSTOMERNAME")));
+        return String.valueOf(date.get("CUSTOMERNAME"));
+           
     }
-
-    public void setCustomerID(int customerID) {
-        this.customerID = customerID;
+     
+    
+    public String getDate() {
+        
+        String sql = "SELECT DATE FROM OREO_RESERVE WHERE RESERVEID " + reserveID;
+        HashMap getDate= db.queryRow(sql);
+        return String.valueOf(getDate.get("DATE"));
+        
     }
-
+    
+    public String getTime() {
+        
+        String sql = "SELECT TIME FROM OREO_RESERVE WHERE RESERVEID " + reserveID;
+        HashMap getTime= db.queryRow(sql);
+        return String.valueOf(getTime.get("TIME"));
+        
+    }
     
     
+    /* public void insertQueuing( int tableNO, int customerID, String date, String time){
+    String sql = "INSERT INTO RESTAURANT_CustomerInfo "
+    + "VALUES ('" + reserveID + "','"
+    +  + "','"
+    + phone + "','"
+    + table + "','"         //Get the data from class table
+    + date + "') ";         //YYYY-MM-DD HH:MI:SS
+    }*/
+    
+     
 
 }
