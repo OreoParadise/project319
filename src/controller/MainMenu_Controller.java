@@ -5,12 +5,9 @@
  */
 package controller;
 
-import java.awt.event.ActionEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import javax.swing.JFrame;
-import restaurantprojectg6.Billing1;
-import restaurantprojectg6.Queue1;
 import view.MainMenu;
 
 /**
@@ -45,17 +42,16 @@ public class MainMenu_Controller extends JFrame{
     }
     
     private void billingButtonActionPerformed(MouseEvent evt) {
-        dispose();
+        menu.dispose();
         BillTable_Controller billtable = new BillTable_Controller();
     }
     
     private void backlogButtonActionPerformed(MouseEvent evt) {
-    dispose();
-    Backlog_Controller backlog = new Backlog_Controller();
-    
+        menu.dispose();
+        Backlog_Controller backlog = new Backlog_Controller();
     }
     private void queuingButtonActionPerformed(MouseEvent evt) {
-        dispose();
+        menu.dispose();
         Queuing_Controller queuing = new Queuing_Controller();
     }
 }
