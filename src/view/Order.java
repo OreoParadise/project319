@@ -5,6 +5,8 @@
  */
 package view;
 
+import java.awt.event.MouseAdapter;
+import java.util.ArrayList;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -21,48 +23,84 @@ public class Order extends JFrame {
     public Order(){
         initComponents();
     }
+    //Method for adding mouseListener to JButton classes of Food
+    public void setFoodListener(MouseAdapter m){
+         for(JButton food : myFood){
+             food.addMouseListener(m);
+         }
+    }
+    
+    public void setClearListener(MouseAdapter m){
+        clear.addMouseListener(m);
+    }
+    
+    public void setDoneListener(MouseAdapter m){
+        doneButton.addMouseListener(m);
+    }
+    
+    
+    //Method for getting button and add them as an element of arrayList
+    private JButton getFoodButton(){
+        JButton temp = new JButton();
+        myFood.add(temp);
+        return temp;
+    }
+    
+    public JLabel getPriceLabel(){
+        return priceLabel;
+    }
+    public void setPriceLabel(String price){
+        priceLabel.setText(price);
+    }
+    
+    public JTable getOrderList(){
+        return orderList;
+    }
     
     private void initComponents() {
 
-        totalPriceLabel = new javax.swing.JLabel();
-        tableNoLabel1 = new javax.swing.JLabel();
-        doneButton = new javax.swing.JButton();
-        clear = new javax.swing.JButton();
-        backButton1 = new javax.swing.JButton();
-        JLabel priceLabel = new javax.swing.JLabel();
-        JPanel BG_Panel3 = new javax.swing.JPanel();
-        espresso = new javax.swing.JButton();
-        latte = new javax.swing.JButton();
-        JButton milkShake = new javax.swing.JButton();
-        JPanel BG_Panel2 = new javax.swing.JPanel();
-        cheese = new javax.swing.JButton();
-        friedEgg = new javax.swing.JButton();
-        JButton frenchFried = new javax.swing.JButton();
-        sandWich = new javax.swing.JButton();
-        honey = new javax.swing.JButton();
-        hamberger = new javax.swing.JButton();
-        rice = new javax.swing.JButton();
-        popcorn = new javax.swing.JButton();
-        hotdog = new javax.swing.JButton();
-        orderListScroll = new javax.swing.JScrollPane();
-        orderList = new javax.swing.JTable();
-        JPanel BG_Panel1 = new javax.swing.JPanel();
-        bananaChoko = new javax.swing.JButton();
-        butterCake = new javax.swing.JButton();
-        candy = new javax.swing.JButton();
-        donut = new javax.swing.JButton();
-        chocolateCake = new javax.swing.JButton();
-        chocoIcecream = new javax.swing.JButton();
-        parfait = new javax.swing.JButton();
-        redVelvet = new javax.swing.JButton();
-        strawberryCake = new javax.swing.JButton();
-        vanillaIceCream = new javax.swing.JButton();
-        strawberryMousse = new javax.swing.JButton();
-        strawberryIceCream = new javax.swing.JButton();
-        orderTitle = new javax.swing.JLabel();
-        JLabel TableLabel = new javax.swing.JLabel();
-        JLabel orderBG = new javax.swing.JLabel();
-        JLabel background = new javax.swing.JLabel();
+        myFood = new ArrayList<JButton>();
+        totalPriceLabel = new JLabel();
+        tableNoLabel1 = new JLabel();
+        doneButton = new JButton();
+        clear = new JButton();
+        backButton1 = new JButton();
+        priceLabel = new JLabel();
+        BG_Panel3 = new JPanel();
+        espresso = getFoodButton();
+        latte = getFoodButton();
+        milkShake = getFoodButton();
+        BG_Panel2 = new JPanel();
+        cheese = getFoodButton();
+        friedEgg = getFoodButton();
+        frenchFried = getFoodButton();
+        sandWich = getFoodButton();
+        honey = getFoodButton();
+        hamberger = getFoodButton();
+        rice = getFoodButton();
+        popcorn = getFoodButton();
+        hotdog = getFoodButton();
+        orderListScroll = new JScrollPane();
+        orderList = new JTable();
+        BG_Panel1 = new JPanel();
+        bananaChoko = getFoodButton();
+        butterCake = getFoodButton();
+        candy = getFoodButton();
+        donut = getFoodButton();
+        chocolateCake = getFoodButton();
+        chocoIcecream = getFoodButton();
+        parfait = getFoodButton();
+        redVelvet = getFoodButton();
+        strawberryCake = getFoodButton();
+        vanillaIceCream = getFoodButton();
+        strawberryMousse = getFoodButton();
+        strawberryIceCream = getFoodButton();
+        orderTitle = new JLabel();
+        TableLabel = new JLabel();
+        orderBG = new JLabel();
+        background = new JLabel();
+        
+        
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -332,16 +370,16 @@ public class Order extends JFrame {
     private JButton hamberger;
     private JButton honey;
     private JButton hotdog;
-    private JButton jButton31;
-    private JLabel jLabel1;
-    private JLabel jLabel3;
-    private JLabel jLabel4;
-    private JLabel jLabel5;
-    private JPanel jPanel1;
-    private JPanel jPanel2;
-    private JPanel jPanel3;
+    private JButton frenchFried;
+    private JLabel background;
+    private JLabel TableLabel;
+    private JLabel orderBG;
+    private JLabel priceLabel;
+    private JPanel BG_Panel1;
+    private JPanel BG_Panel2;
+    private JPanel BG_Panel3;
     private JButton latte;
-    private JButton mikeShake;
+    private JButton milkShake;
     private JTable orderList;
     private JScrollPane orderListScroll;
     private JLabel orderTitle;
@@ -356,5 +394,6 @@ public class Order extends JFrame {
     private JLabel tableNoLabel1;
     private JLabel totalPriceLabel;
     private JButton vanillaIceCream;
+    ArrayList<JButton> myFood;
 
 }

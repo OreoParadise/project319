@@ -33,7 +33,7 @@ public class BillTable extends JFrame {
         Table4 = new JToggleButton();
         Table6 = new JToggleButton();
         Table7 = new JToggleButton();
-        JButton doneButton = new JButton();
+        doneButton = new JButton();
         jLabel2 = new JLabel();
         jLabel1 = new JLabel();
         jLabel3 = new JLabel();
@@ -125,7 +125,11 @@ public class BillTable extends JFrame {
     public void setClickedTable7(MouseAdapter m) {
         Table7.addMouseListener(m);
     }
-
+    
+    public void setDoneListener(MouseAdapter m){
+        doneButton.addMouseListener(m);
+    }
+    
     // Variables declaration - do not modify                     
     private JToggleButton Table1;
     private JToggleButton Table2;
@@ -134,7 +138,7 @@ public class BillTable extends JFrame {
     private JToggleButton Table5;
     private JToggleButton Table6;
     private JToggleButton Table7;
-    private JButton chooseTableButton;
+    private JButton doneButton;
     private JLabel jLabel1;
     private JLabel jLabel2;
     private JLabel jLabel3;

@@ -21,11 +21,13 @@ import view.BillTable;
 public class BillTable_Controller extends JFrame {
     
     private BillTable billtable;
-    Image imgoff = new ImageIcon(this.getClass().getResource("/view/Icon/Error.png")).getImage();
-    Image imgon = new ImageIcon(this.getClass().getResource("/view/Icon/Check.png")).getImage();
+    Image imgoff;
+    Image imgon;
     
     public BillTable_Controller() {
         billtable = new BillTable();
+        imgoff = new ImageIcon(this.getClass().getResource("/view/Icon/Error.png")).getImage();
+        imgon = new ImageIcon(this.getClass().getResource("/view/Icon/Check.png")).getImage();
         billtable.setClickedTable1(new MouseAction());
         billtable.setClickedTable2(new MouseAction());
         billtable.setClickedTable3(new MouseAction());
