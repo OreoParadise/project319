@@ -8,6 +8,7 @@ package controller;
 import java.awt.Button;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
@@ -25,6 +26,7 @@ public class Order_Controller extends JFrame {
     private int foodNumber = 1;
     private int totalPrice = 0;
     private String foodName = "";
+    private String foodID;
     JTable tableOrder;
     JLabel price;
     
@@ -48,6 +50,10 @@ public class Order_Controller extends JFrame {
     
     
     private void buttonActionPerformed(MouseEvent evt){
+        JButton btn = (JButton)evt.getSource();
+        foodID = btn.getText();
+        //Now compare foodID with database to get foodName
+        
         Object[] row = {foodNumber, foodName,20};
         DefaultTableModel myTable = (DefaultTableModel) tableOrder.getModel();
         myTable.addRow(row);
@@ -59,6 +65,7 @@ public class Order_Controller extends JFrame {
         DefaultTableModel model = (DefaultTableModel) tableOrder.getModel();
         model.setRowCount(0);
         order.setPriceLabel("Total Price: " + 0);
+        foodNumber = 1;
     }
     
     private void doneActionPerformed(MouseEvent evt){
