@@ -12,12 +12,13 @@ import javax.swing.JLabel;
 import javax.swing.JToggleButton;
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import java.util.ArrayList;
 /**
  *
  * @author m
  */
 public class BillTable extends JFrame {
-
+    private int tableNo = 0;
     public BillTable() {
         initComponents();
        // setLocationRelativeTo(null); 
@@ -25,17 +26,17 @@ public class BillTable extends JFrame {
     }
 
     private void initComponents() {
-
-        Table3 = new JToggleButton();
-        Table2 = new JToggleButton();
-        Table5 = new JToggleButton();
-        Table1 = new JToggleButton();
-        Table4 = new JToggleButton();
-        Table6 = new JToggleButton();
-        Table7 = new JToggleButton();
+        tableList = new ArrayList<JToggleButton>();
+        Table1 = addToTableList();
+        Table2 = addToTableList();
+        Table3 = addToTableList();
+        Table4 = addToTableList();
+        Table5 = addToTableList();
+        Table6 = addToTableList();
+        Table7 = addToTableList();
         doneButton = new JButton();
-        jLabel2 = new JLabel();
         jLabel1 = new JLabel();
+        jLabel2 = new JLabel();
         jLabel3 = new JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -126,11 +127,23 @@ public class BillTable extends JFrame {
         Table7.addMouseListener(m);
     }
     
+    public JToggleButton addToTableList(){
+        JToggleButton temp = new JToggleButton();
+        tableList.add(tableNo,temp);
+        tableNo++;
+        return temp;
+    }
+    
+    public ArrayList<JToggleButton> getTableList(){
+        return tableList;
+    }
+    
     public void setDoneListener(MouseAdapter m){
         doneButton.addMouseListener(m);
     }
     
-    // Variables declaration - do not modify                     
+    // Variables declaration - do not modify
+    private ArrayList<JToggleButton> tableList;
     private JToggleButton Table1;
     private JToggleButton Table2;
     private JToggleButton Table3;

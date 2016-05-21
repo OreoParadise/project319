@@ -16,7 +16,11 @@ public class Table_Model {
 
     private int tableNo;
     private boolean isEmpty;
-
+    
+    public Table_Model(){
+        super();
+    }
+    
     public Table_Model(int tableNo, boolean isEmpty) {
         this.tableNo = tableNo;
         this.isEmpty = isEmpty;
@@ -31,7 +35,7 @@ public class Table_Model {
         HashMap table = db.queryRow(sql);
         return Integer.parseInt(String.valueOf(table.get("TABLENO")));
     }
-    public int getStatus(){
+    public int getStatus(int tableNo){
         String sql = "SELECT STATUS FROM OREO_TABLE WHERE TABLENO = " + tableNo;
         HashMap status = db.queryRow(sql);
         return Integer.parseInt(String.valueOf(status.get("STATUS")));

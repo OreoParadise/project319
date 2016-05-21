@@ -12,21 +12,28 @@ package controller;
 import java.awt.Image;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.util.ArrayList;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.JToggleButton;
+import model.ConnectDB;
+import model.Table_Model;
 import view.BillTable;
 public class ReserveTable_Controller extends JFrame{
     private BillTable table;
     private Image imgoff;
     private Image imgon;
+    private ConnectDB db;
+    private Table_Model tableDAO;
     public static int currentTable;
     
     public ReserveTable_Controller(){
         table = new BillTable();
+        tableDAO = new Table_Model();
         imgoff = new ImageIcon(this.getClass().getResource("/view/Icon/Error.png")).getImage();
         imgon = new ImageIcon(this.getClass().getResource("/view/Icon/Check.png")).getImage();
+        updateTableStatus();
         table.setClickedTable1(new MouseAction());
         table.setClickedTable2(new MouseAction());
         table.setClickedTable3(new MouseAction());
@@ -42,6 +49,19 @@ public class ReserveTable_Controller extends JFrame{
         table.setVisible(true);
     }
     
+    private void updateTableStatus(){
+        db.connect();
+        ArrayList<JToggleButton> myTable = table.getTableList();
+        for(int i = 1; i < myTable.size(); i++){
+            if(tableDAO.getStatus(i) == 0){
+                myTable.get(i).setIcon(new ImageIcon(imgon));
+            }else{
+                myTable.get(i).setIcon(new ImageIcon(imgoff));
+            }
+        }
+        db.disconnect();
+    }
+    
     private void TableMouseClicked(MouseEvent evt) {
         JToggleButton tableButton = (JToggleButton)evt.getSource();
         if(tableButton.isSelected()){
@@ -54,7 +74,7 @@ public class ReserveTable_Controller extends JFrame{
     }
     
     private void doneActionPerformed(MouseEvent evt){
-        dispose();
+        table.dispose();
         Order_Controller order = new Order_Controller();
     }
     
