@@ -10,6 +10,10 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
+import model.ConnectDB;
+import model.Customer_Model;
+import model.Food_Model;
+import model.ReserveTable_Model;
 
 /**
  *
@@ -18,13 +22,24 @@ import javax.swing.JTextField;
  */
 public class Queuing extends JFrame {
     
+    private ReserveTable_Model reserveModel;
+    private ConnectDB connectDB;
+    
     public Queuing(){
+        
+        connectDB = new ConnectDB();
+        reserveModel = new ReserveTable_Model();
+        
+            connectDB.connect();
+            
+            connectDB.disconnect();
         initComponents();
-        setLocationRelativeTo(null);
+       // setLocationRelativeTo(null);
     }
     
     private void initComponents() {
-
+        
+        doneButton = new JButton();
         queuingTime = new JTextField();
         timeLabel = new JLabel();
         chooseTableButton = new JButton();
@@ -41,6 +56,9 @@ public class Queuing extends JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        
+        doneButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Icon/doney.png"))); // NOI18N
+        getContentPane().add(doneButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 630, 90, 30));
 
         queuingTime.setBackground(new java.awt.Color(255, 255, 153));
         queuingTime.setFont(new java.awt.Font("Times New Roman", 0, 20)); // NOI18N
@@ -89,11 +107,12 @@ public class Queuing extends JFrame {
 
         pack();
     }// </editor-fold>
-    
+     
     public void setClickedQueuing(MouseAdapter m){
         chooseTableButton.addMouseListener(m);
     } 
-     
+         
+    
     // Variables declaration - do not modify                     
     private JLabel MainMenuTitle;
     private JLabel QueuingBG;
@@ -107,5 +126,6 @@ public class Queuing extends JFrame {
     private JTextField queuingDate;
     private JTextField queuingTime;
     private JLabel timeLabel;
+    private JButton doneButton;
     // End of variables declaration
 }
