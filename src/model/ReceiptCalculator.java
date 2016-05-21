@@ -21,8 +21,8 @@ public class ReceiptCalculator {
         super();
     }
     
-    public double getTotalPrice(int tableNo,int date, int time){
-        String sql = "SELECT TOTAL FROM OREO_TABLE WHERE TABLENO = " + tableNo;
+    public double getTotalPrice(int tableNo,int date){
+        String sql = "SELECT SUM(PRICE) FROM OREO_FOOD,OREO_ORDER WHERE TABLENO ="+tableNo+" AND DATE="+date+"AND OREO_FOOD.FOODID = OREO_ORDER.FOODID";
         HashMap totalPrice = db.queryRow(sql);
         return Double.parseDouble(String.valueOf(totalPrice));
         
