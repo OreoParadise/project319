@@ -13,9 +13,7 @@ import static model.ConnectDB.db;
  * @author Oriopun Jaja
  */
 public class Order_Model {
-    
-
-            
+           
     public void insertOrderHistory(int tableNo,String foodID){    
         String sql = "INSERT INTO OREO_ORDER ( TABLENO, FOODID) VALUES("+tableNo+","+foodID+")";
         db.executeQuery(sql);
