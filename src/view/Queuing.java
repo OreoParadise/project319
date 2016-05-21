@@ -10,11 +10,6 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
-import model.ConnectDB;
-import model.Customer_Model;
-import model.Food_Model;
-import model.ReserveTable_Model;
-
 /**
  *
  * @author JamesP
@@ -22,16 +17,7 @@ import model.ReserveTable_Model;
  */
 public class Queuing extends JFrame {
     
-    private ReserveTable_Model reserveModel;
-    private ConnectDB connectDB;
-    
     public Queuing(){
-        connectDB = new ConnectDB();
-        reserveModel = new ReserveTable_Model();
-        
-            connectDB.connect();
-            
-            connectDB.disconnect();
         initComponents();
        // setLocationRelativeTo(null);
     }
@@ -61,6 +47,7 @@ public class Queuing extends JFrame {
 
         queuingTime.setBackground(new java.awt.Color(255, 255, 153));
         queuingTime.setFont(new java.awt.Font("Times New Roman", 0, 20)); // NOI18N
+        queuingTime.setText("04:06:13");
         getContentPane().add(queuingTime, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 460, 140, 30));
 
         timeLabel.setFont(new java.awt.Font("Times New Roman", 0, 25)); // NOI18N
@@ -72,6 +59,7 @@ public class Queuing extends JFrame {
 
         queuingDate.setBackground(new java.awt.Color(255, 255, 153));
         queuingDate.setFont(new java.awt.Font("Times New Roman", 0, 20)); // NOI18N
+        queuingDate.setText("2015-05-22");
         getContentPane().add(queuingDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 410, 140, 30));
 
         customerName.setBackground(new java.awt.Color(255, 255, 153));
@@ -110,6 +98,10 @@ public class Queuing extends JFrame {
     public void setClickedQueuing(MouseAdapter m){
         chooseTableButton.addMouseListener(m);
     }
+    public void setDoneListener(MouseAdapter m){
+        doneButton.addMouseListener(m);
+    }
+    
     public String getCustomerName(){
         return customerName.getText();
     }

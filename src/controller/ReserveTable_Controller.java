@@ -70,7 +70,7 @@ public class ReserveTable_Controller extends JFrame{
         db.connect();
         JToggleButton tableButton = (JToggleButton)evt.getSource();
         currentTable = myTable.indexOf(tableButton);
-        System.out.println(currentTable);
+        System.out.println("Current Table = " + currentTable);
         if(tableButton.isSelected()){
             tableButton.setIcon(new ImageIcon(imgoff));
             tableDAO.updateReservedTable(currentTable+1);
@@ -84,8 +84,8 @@ public class ReserveTable_Controller extends JFrame{
     }
     
     private void doneActionPerformed(MouseEvent evt){
+        Queuing_Controller.tableNo = currentTable;
         table.dispose();
-        Order_Controller order = new Order_Controller();
     }
     
     public static int getCurrentTable(){
