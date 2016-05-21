@@ -32,7 +32,7 @@ public class Food_Model {
     }
    
     public String getPopFood(){    
-        String sql = "SELECT FOODNAME FROM OREO_FOOD JOIN OREO_ORDER ON OREO_FOOD.FOODID = OREO_ORDER.FOODID LIMIT 1";
+        String sql = "SELECT FOODNAME FROM OREO_ORDER,OREO_FOOD WHERE OREO_ORDER.FOODID = OREO_FOOD.FOODID GROUP BY OREO_FOOD.FOODID ORDER BY COUNT(OREO_FOOD.FOODID) DESC LIMIT 1";
         HashMap popFood = db.queryRow(sql);
         return String.valueOf(popFood.get("FOODNAME"));
           
