@@ -29,7 +29,7 @@ public class ReceiptCalculator {
     }   
         
     public double getTotalRevenue(){ 
-        String sql = "SELECT sum(COST) sumcost FROM OREO_BILLING WHERE ISCHECKED =1";
+         String sql = "SELECT sum(COST) sumcost FROM OREO_BILLING WHERE ISCHECKED =1";
         HashMap totalRevenue = db.queryRow(sql);
         return Double.parseDouble(String.valueOf(totalRevenue.get("sumcost")));
     }
