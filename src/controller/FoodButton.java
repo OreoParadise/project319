@@ -16,6 +16,6 @@ public class FoodButton extends JButton{
     int foodPrice;
     
     public FoodButton(){
-        
+        //Something like that
     }
 }

@@ -47,9 +47,6 @@ public class Order_Controller extends JFrame {
         new Order_Controller();
     }
     
-    private void findFoodName(){
-        
-    }
     
     private void buttonActionPerformed(MouseEvent evt){
         foodName = ""; // !!! 
@@ -64,6 +61,10 @@ public class Order_Controller extends JFrame {
         DefaultTableModel model = (DefaultTableModel) tableOrder.getModel();
         model.setRowCount(0);
         order.setPriceLabel("Total Price: " + 0);
+    }
+    
+    private void doneActionPerformed(MouseEvent evt){
+        //Use the data in table and add them into the database
     }
     
     private class MouseAction extends MouseAdapter{

@@ -33,6 +33,6 @@ public class Queuing_Controller extends JFrame{
     
     public void callChooseTable(MouseEvent evt){
         q.dispose();
-        BillTable_Controller b = new BillTable_Controller();
+        ReserveTable_Controller b = new ReserveTable_Controller();
     }
 }

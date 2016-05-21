@@ -29,6 +29,16 @@ public class Order extends JFrame {
              food.addMouseListener(m);
          }
     }
+    
+    public void setClearListener(MouseAdapter m){
+        clear.addMouseListener(m);
+    }
+    
+    public void setDoneListener(MouseAdapter m){
+        doneButton.addMouseListener(m);
+    }
+    
+    
     //Method for getting button and add them as an element of arrayList
     private JButton getFoodButton(){
         JButton temp = new JButton();

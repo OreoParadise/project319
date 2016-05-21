@@ -26,7 +26,7 @@ public class Food_Model {
     public int getFoodID() {
         
         String sql = "SELECT FOODID FROM OREO_FOOD WHERE FOODID = " + foodID;
-        HashMap foodID= db.queryRow(sql);
+        HashMap foodID = db.queryRow(sql);
         return Integer.parseInt(String.valueOf(foodID.get("FOODID")));
         
     }
