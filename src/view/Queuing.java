@@ -92,7 +92,19 @@ public class Queuing extends JFrame {
     
     public void setClickedQueuing(MouseAdapter m){
         chooseTableButton.addMouseListener(m);
-    } 
+    }
+    public String getCustomerName(){
+        return customerName.getText();
+    }
+    public String getPhoneNumber(){
+        return phoneNumber.getText();
+    }
+    public String getQueuingDate(){
+        return queuingDate.getText();
+    }
+    public String getQueuingTime(){
+        return queuingTime.getText();
+    }
      
     // Variables declaration - do not modify                     
     private JLabel MainMenuTitle;

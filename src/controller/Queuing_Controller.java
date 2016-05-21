@@ -16,6 +16,8 @@ import java.awt.event.MouseEvent;
  */
 public class Queuing_Controller extends JFrame{
     private Queuing q;
+    private String customerName, phoneNumber, queuingDate, queuingTime;
+    public static int tableNo;
     
     public Queuing_Controller(){
         q = new Queuing();
@@ -29,10 +31,17 @@ public class Queuing_Controller extends JFrame{
     
     public static void main(String args[]){
         new Queuing_Controller();
+        System.out.println("Table No. = " + tableNo);
+    }
+    
+    public void insertToDB(){
+        customerName = q.getCustomerName();
+        phoneNumber = q.getPhoneNumber();
+        queuingDate = q.getQueuingDate();
+        queuingTime = q.getQueuingTime();
     }
     
     public void callChooseTable(MouseEvent evt){
-        q.dispose();
         ReserveTable_Controller b = new ReserveTable_Controller();
     }
 }

@@ -65,6 +65,7 @@ public class Order_Controller extends JFrame {
     
     private void doneActionPerformed(MouseEvent evt){
         //Use the data in table and add them into the database
+        order.dispose();
     }
     
     private class MouseAction extends MouseAdapter{
