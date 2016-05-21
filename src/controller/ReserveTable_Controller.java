@@ -13,7 +13,6 @@ import java.awt.Image;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import javax.swing.ImageIcon;
-import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.JToggleButton;
@@ -22,6 +21,7 @@ public class ReserveTable_Controller extends JFrame{
     private BillTable table;
     private Image imgoff;
     private Image imgon;
+    public static int currentTable;
     
     public ReserveTable_Controller(){
         table = new BillTable();
@@ -57,6 +57,8 @@ public class ReserveTable_Controller extends JFrame{
         dispose();
         Order_Controller order = new Order_Controller();
     }
+    
+    
     
     private class MouseAction extends MouseAdapter {
         public void mouseClicked(MouseEvent evt){
