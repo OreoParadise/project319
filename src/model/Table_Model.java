@@ -41,4 +41,14 @@ public class Table_Model {
         return Integer.parseInt(String.valueOf(status.get("STATUS")));
     }
     
+    public void updateFreeTable(int tableNo){
+        String sql = "UPDATE OREO_TABLE SET STATUS = " + 0 + " WHERE TABLENO = " + tableNo;
+        db.executeQuery(sql);
+    }
+    
+    public void updateReservedTable(int tableNo){
+        String sql = "UPDATE OREO_TABLE SET STATUS = " + 1 + " WHERE TABLENO = " + tableNo;
+        db.executeQuery(sql);
+    }
+    
 }

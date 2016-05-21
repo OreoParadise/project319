@@ -26,6 +26,8 @@ public class BillTable_Controller extends JFrame {
     private BillTable billtable;
     private ConnectDB db;
     private Table_Model tableDAO;
+    private ArrayList<JToggleButton> myTable;
+    private static int currentTable;
     Image imgoff;
     Image imgon;
     
@@ -45,18 +47,17 @@ public class BillTable_Controller extends JFrame {
         billtable.setVisible(true);
     }
     
-    public static void main(String[] args) {
-        new BillTable_Controller();
-    }
-    
     private void updateTableStatus(){
         db.connect();
-        ArrayList<JToggleButton> myTable = billtable.getTableList();
-        for(int i = 1; i < myTable.size(); i++){
-            if(tableDAO.getStatus(i) == 0){
+        myTable = billtable.getTableList();
+        for(int i = 0; i < myTable.size(); i++){
+            System.out.println(i);
+            if(tableDAO.getStatus(i+1) == 0){
                 myTable.get(i).setIcon(new ImageIcon(imgon));
+                myTable.get(i).setSelected(true);
             }else{
                 myTable.get(i).setIcon(new ImageIcon(imgoff));
+                myTable.get(i).setSelected(false);
             }
         }
         db.disconnect();
@@ -64,14 +65,24 @@ public class BillTable_Controller extends JFrame {
     
     //methods for declaring what to do when each table button is clicked
     private void TableMouseClicked(MouseEvent evt) {
+        db.connect();
         JToggleButton tableButton = (JToggleButton)evt.getSource();
+        currentTable = myTable.indexOf(tableButton);
+        System.out.println(currentTable);
         if(tableButton.isSelected()){
             tableButton.setIcon(new ImageIcon(imgoff));
+            tableDAO.updateReservedTable(currentTable+1);
             JOptionPane.showMessageDialog(null, "Table selected");
         }else{
             tableButton.setIcon(new ImageIcon(imgon));
+            tableDAO.updateFreeTable(currentTable+1);
             JOptionPane.showMessageDialog(null, "Table deselected");
         }
+        db.disconnect();
+    }
+    
+    public static int getCurrentTable(){
+        return currentTable;
     }
     
     private class MouseAction extends MouseAdapter {

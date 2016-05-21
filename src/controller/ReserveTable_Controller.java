@@ -26,7 +26,8 @@ public class ReserveTable_Controller extends JFrame{
     private Image imgon;
     private ConnectDB db;
     private Table_Model tableDAO;
-    public static int currentTable;
+    private static int currentTable;
+    private ArrayList<JToggleButton> myTable; 
     
     public ReserveTable_Controller(){
         table = new BillTable();
@@ -51,31 +52,44 @@ public class ReserveTable_Controller extends JFrame{
     
     private void updateTableStatus(){
         db.connect();
-        ArrayList<JToggleButton> myTable = table.getTableList();
-        for(int i = 1; i < myTable.size(); i++){
-            if(tableDAO.getStatus(i) == 0){
+        myTable = table.getTableList();
+        for(int i = 0; i < myTable.size(); i++){
+            System.out.println(i);
+            if(tableDAO.getStatus(i+1) == 0){
                 myTable.get(i).setIcon(new ImageIcon(imgon));
+                myTable.get(i).setSelected(true);
             }else{
                 myTable.get(i).setIcon(new ImageIcon(imgoff));
+                myTable.get(i).setSelected(false);
             }
         }
         db.disconnect();
     }
     
     private void TableMouseClicked(MouseEvent evt) {
+        db.connect();
         JToggleButton tableButton = (JToggleButton)evt.getSource();
+        currentTable = myTable.indexOf(tableButton);
+        System.out.println(currentTable);
         if(tableButton.isSelected()){
             tableButton.setIcon(new ImageIcon(imgoff));
+            tableDAO.updateReservedTable(currentTable+1);
             JOptionPane.showMessageDialog(null, "Table selected");
         }else{
             tableButton.setIcon(new ImageIcon(imgon));
+            tableDAO.updateFreeTable(currentTable+1);
             JOptionPane.showMessageDialog(null, "Table deselected");
         }
+        db.disconnect();
     }
     
     private void doneActionPerformed(MouseEvent evt){
         table.dispose();
         Order_Controller order = new Order_Controller();
+    }
+    
+    public static int getCurrentTable(){
+        return currentTable;
     }
     
     
