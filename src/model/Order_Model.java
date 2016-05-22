@@ -14,8 +14,12 @@ import static model.ConnectDB.db;
  */
 public class Order_Model {
            
+    public Order_Model(){
+        super();
+    }
+    
     public void insertOrderHistory(int tableNo,String foodID){    
-        String sql = "INSERT INTO OREO_ORDER ( TABLENO, FOODID) VALUES("+tableNo+","+foodID+")";
+        String sql = "INSERT INTO OREO_ORDER ( TABLENO, FOODID) VALUES(" + tableNo + " , '" + foodID +"')";
         db.executeQuery(sql);
             
     } 

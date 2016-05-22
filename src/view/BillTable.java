@@ -83,7 +83,7 @@ public class BillTable extends JFrame {
         getContentPane().add(doneButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 570, 140, 40));
 
         jLabel3.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
-        jLabel3.setText("choose table to check bill");
+        jLabel3.setText("Please choose the table");
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 510, -1, 40));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Icon/Map.png"))); // NOI18N
@@ -141,6 +141,7 @@ public class BillTable extends JFrame {
     public void setDoneListener(MouseAdapter m){
         doneButton.addMouseListener(m);
     }
+    
     
     // Variables declaration - do not modify
     private ArrayList<JToggleButton> tableList;

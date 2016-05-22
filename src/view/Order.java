@@ -104,7 +104,7 @@ public class Order extends JFrame {
         orderList = new JTable();
         BG_Panel1 = new JPanel();
         orderTitle = new JLabel();
-        TableLabel = new JLabel();
+        tableLabel = new JLabel();
         orderBG = new JLabel();
         background = new JLabel();
         
@@ -349,9 +349,9 @@ public class Order extends JFrame {
         orderTitle.setText("Order");
         getContentPane().add(orderTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 170, 150, 70));
 
-        TableLabel.setFont(new java.awt.Font("Times New Roman", 0, 20)); // NOI18N
-        TableLabel.setText("Table No. ");
-        getContentPane().add(TableLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 290, -1, 20));
+        tableLabel.setFont(new java.awt.Font("Times New Roman", 0, 20)); // NOI18N
+        tableLabel.setText("Table No. ");
+        getContentPane().add(tableLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 290, -1, 20));
 
         orderBG.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Icon/Order.png"))); // NOI18N
         getContentPane().add(orderBG, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 230, -1, -1));
@@ -360,6 +360,14 @@ public class Order extends JFrame {
         getContentPane().add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
+    }
+    
+    public JLabel getTableLabel(){
+        return tableLabel;
+    }
+    
+    public void setTableLabel(String in){
+        tableLabel.setText(in);
     }
     
     // Variables declaration - do not modify                     
@@ -380,7 +388,7 @@ public class Order extends JFrame {
     private JButton hotdog;
     private JButton frenchFried;
     private JLabel background;
-    private JLabel TableLabel;
+    private JLabel tableLabel;
     private JLabel orderBG;
     private JLabel priceLabel;
     private JPanel BG_Panel1;

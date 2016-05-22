@@ -44,11 +44,6 @@ public class Queuing_Controller extends JFrame{
         q.setVisible(true);
     }
     
-    public static void main(String args[]){
-        new Queuing_Controller();
-        
-    }
-    
     public void insertToDB(MouseEvent evt){
         db.connect();
         customerName = q.getCustomerName();

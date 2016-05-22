@@ -19,6 +19,7 @@ import javax.swing.table.DefaultTableModel;
 import view.Order;
 import model.ConnectDB;
 import model.Food_Model;
+import model.Order_Model;
 
 /**
  *
@@ -26,42 +27,47 @@ import model.Food_Model;
  */
 public class Order_Controller extends JFrame {
     
-    private Order order;
+    private final Order order;
     private ConnectDB connectDB;
     private Food_Model foodDAO;
     private int foodNumber = 1;
     private double totalPrice = 0;
     private double foodPrice;
+    public static int tableNo;
     private String foodName = "";
     private String foodID;
-    private ArrayList<String> orderHistory;
+    private Order_Model orderDAO;
+    private final ArrayList<String> orderHistory;
     JTable tableOrder;
     JLabel price;
     
     public Order_Controller() {
         order = new Order();
+        foodDAO = new Food_Model();
+        orderDAO = new Order_Model();
         orderHistory = new ArrayList<String>();
         tableOrder = order.getOrderList();
         price = order.getPriceLabel();
+        tableNo = Queuing_Controller.tableNo;
+        order.setTableLabel("Table No. " + tableNo);
         order.setFoodListener(new MouseAction());
         order.setClearListener(new MouseAdapter(){
             public void mouseClicked(MouseEvent evt){
                 clearTablePerformed(evt);
             }
         });
+        order.setDoneListener(new MouseAdapter() {
+            public void mouseClicked(MouseEvent evt){
+                doneActionPerformed(evt);
+            }
+        });
         order.setVisible(true);
-        
-    }
-    
-    public static void main(String[] args) {
-        new Order_Controller();
     }
     
     
     private void buttonActionPerformed(MouseEvent evt){
         JButton btn = (JButton)evt.getSource();
         connectDB.connect();
-        foodDAO = new Food_Model();
         foodID = btn.getText();
         orderHistory.add(foodID);
         //Now compare foodID with database to get foodName
@@ -87,10 +93,12 @@ public class Order_Controller extends JFrame {
     private void doneActionPerformed(MouseEvent evt){
         //Use the data in table and add them into the database
         connectDB.connect();
-        for(String it: orderHistory){
-            
+        for(String id: orderHistory){
+            System.out.println( "TableNo = " + tableNo + " ID = " + id);
+            orderDAO.insertOrderHistory(tableNo, id);
         }
         connectDB.disconnect();
+        JOptionPane.showMessageDialog(null, "Order Successfully! :)");
         order.dispose();
     }
     
