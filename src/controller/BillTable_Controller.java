@@ -37,6 +37,7 @@ public class BillTable_Controller extends JFrame {
         tableDAO = new Table_Model();
         imgoff = new ImageIcon(this.getClass().getResource("/view/Icon/Error.png")).getImage();
         imgon = new ImageIcon(this.getClass().getResource("/view/Icon/Check.png")).getImage();
+        updateTableStatus();
         billtable.setClickedTable1(new MouseAction());
         billtable.setClickedTable2(new MouseAction());
         billtable.setClickedTable3(new MouseAction());

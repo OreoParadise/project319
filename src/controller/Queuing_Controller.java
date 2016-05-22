@@ -38,7 +38,7 @@ public class Queuing_Controller extends JFrame{
         q.setDoneListener(new MouseAdapter(){
             public void mouseClicked(MouseEvent evt){
                 insertToDB(evt);
-                Order_Controller order = new Order_Controller();
+                
             }
         });
         q.setVisible(true);
@@ -55,6 +55,8 @@ public class Queuing_Controller extends JFrame{
         System.out.println("Customer ID = " + customerID);
         customerDAO.insertReserveInfo(tableNo, customerID, queuingDate, queuingTime);
         db.disconnect();
+        q.dispose();
+        Order_Controller order = new Order_Controller();
     }
     
     public void callChooseTable(MouseEvent evt){
